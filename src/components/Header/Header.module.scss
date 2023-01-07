@@ -1,0 +1,125 @@
+.header{
+  .container{
+    max-width: 1230px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #543019;
+    position: relative;
+    .burger{
+      display: none;
+      font-size: 30 px;
+      color: #552F1D;
+      @media (max-width: 1024px){
+        display: block;
+      } 
+      @media (max-width: 375px){
+        font-size: 25px;
+      }
+    }
+    .nav_list{
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      @media (max-width: 1024px){
+        display: none;
+      }
+      li{  
+        cursor: pointer;
+        a {
+          white-space: nowrap;
+          transition: .3s;
+          text-transform: uppercase;
+          font-size: 13px;
+          font-weight: 400;
+        }
+
+        .activeList {
+          white-space: nowrap;
+          display: inline-block;
+          padding: 8px 15px;
+          background-color: #4D1200;
+          font-family: Circe, sans-serif;
+          font-size: 13px;
+          font-weight: 400;
+          text-transform: uppercase;
+          color: #fff;
+        }
+      }
+    }
+    .nav_logo{
+      
+      a {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 6px;
+
+      }
+      
+      img {
+        cursor: pointer;
+        object-fit: contain;
+      }
+      
+      @media (max-width: 1024px) {
+        margin-left: 200px;
+      }
+      @media (max-width: 768px) {
+        margin-left: 100px;
+      }
+      @media (max-width: 425px){
+        margin-left: 0;
+      }
+      p{
+        font-size: 12px;
+        font-family: "DS CenturyCapitals", sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        @media (max-width: 375px){
+          font-size: 9px;
+        }
+      }
+    }
+    .nav_info{
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      font-family: "Blacker Display", sans-serif;
+      font-weight: 200;
+      font-size: 15px;
+      @media (max-width: 1024px){
+        gap: 15px;
+      }
+
+      div{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        svg{
+          font-size: 20px;
+        }
+        span{
+          @media (max-width: 1024px) {
+            display: none;
+          }
+        }
+      }
+      .social_icons{
+        font-weight: 700;
+        a{
+          @media (max-width: 768px) {
+            display: none;
+          }
+        }
+        @media (max-width: 425px) {
+          display: none;
+        }
+      }
+    }
+  }
+}

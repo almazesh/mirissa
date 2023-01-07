@@ -1,0 +1,100 @@
+
+.catalog_card {
+  width: 33.33%;
+  height: auto;
+  border: .3px solid #E1E1E1;
+  border-top: 0;
+  position: relative;
+  text-align: center;
+  padding: 20px 24px;
+  padding-bottom: 80px;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 2px 30px 10px rgb(237 237 237 / 50%);
+
+    .catalog_card_title {
+      h2 {
+        color: #a11f0b;
+      }
+    }
+  }
+
+  svg {
+    cursor: pointer;
+    font-size: 28px;
+    position: absolute;
+    left: 8%;
+    top: 8%;
+    font-weight: 100;
+  }
+
+  .tea {
+    font-weight: 300;
+    text-align: center;
+    font-weight: 100;
+    color: #A5A5A5;
+    margin-bottom: 5px;
+    font-size: 16px;
+    line-height: 18px;
+    font-style: italic;
+    position: absolute;
+    right: 8%;
+    top: 8%;
+  }
+
+  .catalog_card_img {
+    margin-top: 50px;
+    margin-bottom: 10px;
+
+    img {
+      cursor: pointer;
+      object-fit: contain;
+    }
+  }
+
+  .catalog_card_title {
+    h2 {
+      margin: 0;
+      color: inherit;
+      text-decoration: none;
+      font-size: 25px;
+      font-weight: 300;
+      line-height: 29px;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      line-clamp: 2;
+      overflow: hidden;
+      display: -webkit-box;
+    }
+  }
+
+  .catalog_card_footer {
+    h2 {
+      font-weight: 300;
+      font-size: 20px;
+      margin-top: 20px;
+      line-height: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin-bottom: 0px;
+    }
+
+    p {
+      overflow: hidden;
+      margin-top: 16px;
+      display: block;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 19px;
+      max-height: 59px;
+      text-align: center;
+      color: #170000;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      line-clamp: 3;
+    }
+  }
+}

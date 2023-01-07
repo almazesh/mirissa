@@ -1,0 +1,126 @@
+.footer_2{
+  border-top: 1px solid #9B9B9B;
+  .container{
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 425px){
+      flex-direction: column;
+    }
+    .left_block{
+      display: flex;
+      width: 500px;
+      height: 150px;
+      position: relative;
+      padding: 32px 50px 0 0;
+      @media (max-width: 1024px) {
+        flex-direction: column;
+        gap: 10px;
+        height: 100%;
+      }
+      @media (max-width: 425px){
+        width: 100%;
+        border-bottom: 1px solid #9B9B9B;
+        padding-bottom: 20px;
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: #9B9B9B;
+        width: 1px;
+        height: 100%;
+        @media (max-width: 425px){
+          display: none;
+        }
+      }
+      .footer_number{
+        width: 250px;
+        a{
+          font-size: 26px;
+          font-weight: 700;
+        }
+        p{
+          font-size: 15px;
+          font-weight: 300;
+          line-height: 22px;
+          margin-top: 20px;
+        }
+      }
+      .whatsapp{
+        font-weight: 350;
+        font-size: 14px;
+        line-height: 25px;
+        color: #27160e;
+        margin-left: 14px;
+        transition: color 300ms;
+        cursor: pointer;
+        height: 30px;
+        &:hover{
+          color: green;
+        }
+        svg{
+          margin-right: 5px;
+        }
+        @media (max-width: 1024px){
+          margin-left: 0;
+        }
+      }
+      .telegram{
+        font-weight: 350;
+        font-size: 16px;
+        line-height: 25px;
+        color: #27160e;
+        margin-left: 14px;
+        transition: color 300ms;
+        cursor: pointer;
+        height: 30px;
+        &:hover{
+          color: blue;
+        }
+        svg{
+          margin-right: 5px;
+        }
+        @media (max-width: 1024px){
+          margin-left: 0;
+        }
+      }
+    }
+    .right_block{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: 150px;
+      padding: 0 0 0 100px;
+      @media (max-width: 425px){
+        padding: 0;
+        flex-direction: column;
+      }
+      .right_list{
+        padding: 30px 0;
+        li{
+          margin-bottom: 20px;
+          color: #27160e;
+          cursor: pointer;
+          font-size: 15px;
+        }
+      }
+      .right_info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        @media (max-width: 425px){
+          flex-direction: row;
+        }
+        div{
+          font-size: 15px;
+          font-weight: 300;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}

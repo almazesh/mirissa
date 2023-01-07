@@ -1,0 +1,28 @@
+
+
+.events_container {
+  max-width: 1150px;
+  margin: auto;
+  
+
+  &_title{
+    text-align: center;
+    margin-top: 30px;
+
+    h2 {
+      font-size: 2em;
+      font-weight: 400;
+    }
+  }
+
+  &_row {
+    margin-top: 50px;
+
+    video {
+      width: 50%;
+      height: 300px;
+    }
+  }
+}
+
+

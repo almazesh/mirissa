@@ -1,0 +1,28 @@
+.facts_text{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 50px;
+  
+  .fact_block{
+    width: 215px;
+    color: #4D1200;
+    font-size: 14px;
+    line-height: 24px;
+    transition: .5s;
+    cursor: pointer;
+    text-align: center;
+    .fact_cardImg {
+      height: 120px;
+      img{
+        transition: .5s;
+      }
+    }
+    &:hover{
+      img{
+        transform: scale(1.1);
+      }
+    }
+  }
+
+}

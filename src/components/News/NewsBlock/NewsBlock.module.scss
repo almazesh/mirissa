@@ -1,0 +1,23 @@
+.news_card{
+  width: 100%;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #E1E1E1;
+  h1{
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 32px;
+    margin-bottom: 20px;
+  }
+  p{
+    margin-bottom: 20px;
+    color: #170000;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 300;
+  }
+}
+
+.news_card:nth-last-child(1){
+  border: none;
+}

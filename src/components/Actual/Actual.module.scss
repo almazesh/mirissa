@@ -1,0 +1,67 @@
+.actual {
+  margin-top: 180px;
+  margin-bottom: 100px;
+  .container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    .title_container {
+      max-width: 840px;
+      margin: 0 auto;
+      position: relative;
+
+      span {
+        position: absolute;
+        font-size: 150px;
+        color: #d8d6d6;
+        opacity: .4;
+        font-family: 'Moon Dance', cursive;
+        font-style: italic;
+        top: -60%;
+        left: 46%;
+      }
+
+      .actual_history {
+        text-align: center;
+        font-size: 25px;
+        line-height: 36px;
+        color: #27160e;
+      }
+
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        color: white;
+        padding-top: 80px;
+        padding-bottom: 65px;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          display: block;
+          height: 1px;
+          background-color: #9B9B9B;
+        }
+
+        h1 {
+          font-weight: 400;
+          color: #27160e;
+          background-color: #fff;
+          position: relative;
+          font-size: 40px;
+          padding: 0 60px;
+          @media (max-width: 425px) {
+            font-size: 24px;
+            padding: 0 15px;
+          }
+        }
+      }
+    }
+  }
+}

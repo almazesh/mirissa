@@ -1,0 +1,44 @@
+.selections{
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 10px;
+  .selections_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    color: white;
+    padding-top: 80px;
+    padding-bottom: 65px;
+    position: relative;
+    max-width: 740px;
+    margin: 0 auto;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      display: block;
+      height: 1px;
+      background-color: #9B9B9B;
+    }
+    h1 {
+      font-family: "Blacker Display", sans-serif;
+      font-weight: 400;
+      color: #27160e;
+      background-color: #fff;
+      position: relative;
+      padding: 0 60px;
+      @media (max-width: 425px) {
+        font-size: 20px;
+        padding: 0 30px;
+      }
+    }
+  }
+  .selection_blocks{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,171 @@
+
+
+.about_page {
+  
+  .about_container {
+    max-width: 1150px;
+    margin: auto;
+      .about_title {
+        margin-top: 30px;
+        text-align: center;
+        h2 {
+          font-size: 2em;
+          font-weight: 400;
+          position: relative;
+    
+          &::after {
+            content: "";
+            position: absolute;
+            right: 25%;
+            top: 60%;
+            background-color: #9B9B9B;
+            width: 150px;
+            height: 1px;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            left: 25%;
+            top: 60%;
+            background-color: #9B9B9B;
+            width: 150px;
+            height: 1px;
+          }
+        }
+      }
+      .about_content {
+        text-align: center;
+        margin-top: 30px;
+        
+        h3 {
+          font-weight: 400;
+          font-size: 1.5em;
+        }
+        p {
+          margin-top: 20px;
+          font-size: 15px;
+          font-weight: 300;
+          line-height: 22px;
+        }
+      }
+  }
+
+  .about_gallery {
+    background-color: #4D1200;
+    margin-top: 50px;
+    padding: 80px 0;
+
+    .about_gallery_row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      img {
+        width: 31%;
+        height: 300px;
+        cursor: pointer;
+        object-fit: cover;
+      }
+    }
+
+    
+  }
+
+  .about_history {
+    margin-top: 50px;
+
+    &_title {
+      text-align: center;
+
+      h2 {
+        font-size: 2em;
+        font-weight: 400;
+        position: relative;
+    
+          &::after {
+            content: "";
+            position: absolute;
+            right: 13%;
+            top: 60%;
+            background-color: #9B9B9B;
+            width: 150px;
+            height: 1px;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            left: 13%;
+            top: 60%;
+            background-color: #9B9B9B;
+            width: 150px;
+            height: 1px;
+          }
+      }
+    }
+
+    &_content {
+      margin-top: 50px;
+      object-fit: contain;
+
+      .about_row {
+        margin-top: 50px;
+        .left {
+          h2 {
+            font-size: 1.5em;
+            font-weight: 300;
+          }
+
+          p {
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 22px;
+            text-align: justify;
+            margin-top: 20px;
+
+            span {
+              color: #4D1200;
+            }
+          }
+        }
+
+        .right {
+          text-align: center;
+          img {
+            float: right;
+            cursor: pointer;
+            shape-outside: url("../../73-736750_margot-robbie-hair-margot-robbie-style-actress-margot-removebg-preview.png");
+            width: 350px;
+            shape-margin: 10px;
+            margin: 10px;
+            margin-bottom: 0;
+            border-radius: 50% 30% 70%;
+            height: 350px;
+            object-fit: cover;
+            object-position: top;
+          }
+        }
+      }
+
+      .fact {
+        display: flex;
+        align-items: center;
+        margin-bottom: 70px;
+        margin-top: 50px;
+        gap: 100px;
+
+        img {
+          width: 70px;
+          cursor: pointer;
+          height: 70px;
+          object-fit: cover;
+          transition: .3s;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+
+    }
+  }
+  
+}  

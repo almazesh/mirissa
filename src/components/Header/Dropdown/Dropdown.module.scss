@@ -1,0 +1,33 @@
+.dropdown{
+  position: absolute;
+  background-color: white;
+  width: 70%;
+  height: 470px;
+  z-index: 500;
+  top: 85px;
+  left: -1000px;
+  transition: .7s ease-in-out;
+  @media (max-width: 425px){
+    width: 100%;
+  }
+  .dropdown_content{
+    width: 90%;
+    margin: 50px auto;
+    .list{
+      display: flex;
+      flex-wrap: wrap;
+      li{
+        width: 40%;
+        margin-right: 16px;
+        margin-bottom: 50px;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.dropdown_active{
+  position: absolute;
+  left: 0;
+  top: 85px;
+}

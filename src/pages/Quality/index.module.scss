@@ -1,0 +1,48 @@
+
+
+.quality_page {
+  margin-top: 30px;
+ 
+  .quality_container {
+    max-width: 1150px;
+    margin: auto;
+
+    .quality_page_title {
+      text-align: center;
+  
+      h2 {
+        font-size: 2em;
+        font-weight: 400;
+      }
+    }
+  
+    .quality_page_row {
+      display: flex;
+      margin-top: 50px;
+      align-items: center;
+
+      div{
+        width: 50%;
+      }
+
+      .left {
+        h4 {
+          font-size: 1.7em;
+          font-weight: 400;
+          margin: 0;
+        }
+        p {
+          font-size: 15px;
+          font-weight: 300;
+          line-height: 22px;
+          margin: 0;
+          margin-top: 20px;
+        }
+      }
+
+      .right {
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+
+
+.views_row {
+  display: flex;
+  align-items: center;
+
+  .views_left {
+    width: 50%;
+    h2 {
+      font-size: 1.7em;
+      font-weight: 400;
+    }
+
+    p {
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 22px;
+        margin: 0;
+        margin-top: 20px;
+    }
+
+    h3 {
+      font-family: 'Cormorant', serif;
+      font-size: 120px;
+      color: #d8d6d6;
+      opacity: 0.4;
+      font-style: italic;
+      font-weight: 400;
+    }
+  } 
+
+  .views_right {
+    width: 50%;
+
+    img {
+      object-fit: contain;
+    }
+  }
+}

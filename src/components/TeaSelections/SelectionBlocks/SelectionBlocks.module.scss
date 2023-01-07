@@ -1,0 +1,75 @@
+.block {
+  .block_img {
+    max-width: 550px;
+    height: 300px;
+    position: relative;
+    cursor: pointer;
+
+    @media (max-width: 1024px) {
+      width: 480px;
+    }
+    @media (max-width: 768px) {
+      width: 350px;
+      height: 180px;
+    }
+    @media (max-width: 320px) {
+      width: 300px;
+    }
+    &:hover .btn {
+      opacity: 1;
+      bottom: 70px;
+      @media (max-width: 768px) {
+        bottom: 20px;
+      }
+    }
+
+    &:hover .block_inner span {
+      opacity: 0;
+      transition: .3s;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .block_inner {
+      position: absolute;
+      z-index: 10;
+      color: white;
+      top: 100px;
+      left: 100px;
+      width: 250px;
+      @media (max-width: 768px) {
+        top: 30px;
+        left: 50px;
+      }
+
+      h3 {
+        font-size: 28px;
+        line-height: 32px;
+        font-weight: 400;
+        margin-bottom: 30px;
+      }
+    }
+
+    .btn {
+      position: absolute;
+      bottom: 50px;
+      left: 100px;
+      opacity: 0;
+      transition: .3s;
+      border-bottom: 1px solid #fff;
+      padding-bottom: 20px;
+
+      button {
+        background: transparent;
+        font-size: 15px;
+        color: white;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+}

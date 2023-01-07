@@ -1,0 +1,58 @@
+
+.quality_row {
+  display: flex;
+  margin-top: 170px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+  .card {
+    border: 1px solid #e1e1e1;
+    padding: 130px 40px 30px;
+    text-align: center;
+    position: relative;
+
+    img {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      border-radius: 50%;
+      top: -38%;
+      left: 28%;
+      cursor: pointer;
+    }
+
+    h2 {
+      margin-bottom: 36px;
+      font-weight: 300;
+      font-size: 32px;
+      line-height: 33px;
+      margin-top: 0;
+    }
+
+    p {
+      color: #787878;
+      font-weight: 3200;
+      font-size: 17px;
+      line-height: 26px;
+      font-style: italic;
+      opacity: 0.5;
+    }
+
+    a {
+      color: #a5a5a5;
+      font-size: 15px;
+      font-weight: 300;
+      padding-top: 50px;
+      display: inline-block;
+    }
+  }
+
+  .icon {
+    text-align: center;
+    width: 50%;
+    img {
+      object-fit: contain;
+      cursor: pointer;
+    }
+  }
+}

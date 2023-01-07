@@ -1,0 +1,11 @@
+.pagination{
+  position: absolute;
+  z-index: 50;
+  bottom: 1px;
+  left: 35%;
+  .circle{
+    cursor: pointer;
+    font-size: 30px;
+    color: #4C0B0B;
+  }
+}

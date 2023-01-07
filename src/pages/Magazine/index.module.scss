@@ -1,0 +1,44 @@
+.magazine_container {
+  max-width: 1150px;
+  margin: auto;
+  .magazine_title {
+    text-align: center;
+    margin-top: 30px;
+
+    h2 {
+      font-size: 2em;
+      font-weight: 400;
+    }
+  }
+
+  .magazine_catalog {
+    text-align: center;
+    margin-top: 50px;
+
+    h2 {
+      font-size: 2em;
+      font-weight: 400;
+    }
+  }
+
+  .magazine_row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    justify-content: space-between;
+    row-gap: 50px;
+    .card {
+      width: 47%;
+      overflow: hidden;
+      img {
+        width: 100%;
+        cursor: pointer;
+        transition: .3s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
