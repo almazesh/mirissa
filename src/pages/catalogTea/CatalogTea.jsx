@@ -1,11 +1,17 @@
 import React from 'react'
 import Fact from '../../components/Fact/Fact';
+import { ScrollToTop } from '../../helpers/scroll';
 import { FilterList } from '../../utils/list';
 import CatalogCard from './CatalogCard/CatalogCard';
 
 import c from "./index.module.scss"
 
 const Catalog = () => {
+
+  React.useEffect(() => {
+    ScrollToTop()
+  }, [])
+
   return (
     <div className={c.container}>
       <div className={c.catalog_title}>

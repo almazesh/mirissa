@@ -44,6 +44,7 @@
 
   .cards {
     display: flex;
+    height: 300px;
     justify-content: space-between;
 
     .cards_item:nth-last-child(1) {

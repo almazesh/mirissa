@@ -1,0 +1,75 @@
+
+
+.locations_container {
+  max-width: 1150px;
+  margin: auto;
+
+  &_title {
+    text-align: center;
+    margin-top: 30px;
+
+    h2 {
+      font-size: 2em;
+      font-weight: 400;
+    }
+  }
+
+  .search_parent {
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+    gap: 30px;
+    h4 {
+      margin: 0;
+    }
+    section {
+      position: relative;
+      width: 70%;
+
+      
+
+      input {
+        width: 100%;
+        border:1px solid #4D1200;
+        padding: 10px 10px;
+      }
+
+      img {
+        width: 20px;
+        position: absolute;
+        right: 2%;
+        top: 30%;
+      }
+    }
+  }
+
+  &_table {
+    margin-top: 40px;
+
+    tbody {
+      position: relative;
+      tr {
+
+        cursor: pointer;
+        transition: .2s;
+
+        &:hover {
+          background-color: #4D1200;
+          color: white;
+          cursor: pointer;
+        }
+      }
+
+      div {
+        height: 200px;
+        p {
+          position: absolute;
+          left: 40%;
+          font-size: 20px;
+          color: #4D1200;
+          top: 100px;
+        }
+      }
+    }
+  }
+}

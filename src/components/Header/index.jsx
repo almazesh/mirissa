@@ -10,12 +10,16 @@ import Dropdown from "./Dropdown";
 import {AiOutlineClose} from "react-icons/ai";
 import { Link, NavLink } from 'react-router-dom';
 
+import Tree from "../../assets/long-garland-christmas-tree-branches-vector-illustration-christmas-garland-beautiful-evergreen-garland-xmas-tree-branches-105662649-removebg-preview.png"
+
 function Header() {
   const [burgerActive, setBurgerActive] = React.useState(false)
   
   return (
     <div className={c.header}>
+      {Array.from({length:199}).map((item,index) => <div key={index} className={c.snow}></div>)}
       <div className={c.container}>
+        <img className={c.tree} src={Tree} alt=''/>
         <span
           className={c.burger}
           onClick={() => setBurgerActive(prev => !prev)}
@@ -42,12 +46,15 @@ function Header() {
         </div>
         <div className={c.nav_info}>
           <div className={c.store}>
-            <GoLocation/>
-            <span>Магазины</span>
+            <Link to={"/locations"}>
+              <GoLocation/>
+              <span>Магазины</span>
+            </Link>
           </div>
           <div className={c.search}>
-            <BiSearch/>
-            <span>Поиск</span>
+            <Link to={"/contacts"}>
+              <span>Контакты</span>
+            </Link>
           </div>
           <div className={c.social_icons}>
             <BsWhatsapp/>

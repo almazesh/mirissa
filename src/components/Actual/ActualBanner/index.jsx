@@ -1,9 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useData from '../../../hooks/useData';
+import { Loader } from '../../Loader/Loader';
 import MagazineCard from '../../MagazineCard/MagazineCard';
 import c from './ActualBanner.module.scss'
 
-function ActualBanner({background, type, title, text}) {
+function ActualBanner({background}) {
+  const { actual } = useData();
+
+  console.log(actual)
 
   return (
     <div className={c.actual}>
@@ -13,20 +18,21 @@ function ActualBanner({background, type, title, text}) {
           backgroundImage: `url(${background})`
         }}>
         <p>
-          {type}
+          {actual?.length} видов
         </p>
         <h2>
-          {title}
+          «А что остальные берут?». Топ-{actual?.length} чистые сорта
         </h2>
         <p className={c.actual_text}>
-          {text}
+          Топ-{actual?.length} чистых сортов. Классика, проверенная временем и выбором покупателей «Mirissa»
         </p>
       </div>
       <div className={c.cards}>
-        <MagazineCard />
-        <MagazineCard />
-        <MagazineCard />
-        <MagazineCard />
+        {actual?.length === 0 && <p>Empty</p>}
+
+        {!actual && <Loader />}
+
+        {actual?.map(item => <MagazineCard data={item} key={item.id}/>)}
       </div>
 
       <div className={c.more}>

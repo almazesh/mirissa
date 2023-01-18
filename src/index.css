@@ -1,3 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 @font-face {
   font-family: "Blacker Display", sans-serif;
   src: url("./fonts/Blacker-Display-Medium-trial.ttf") format("truetype");

@@ -1,0 +1,15 @@
+
+
+.photo_parent {
+  margin-top: 50px;
+
+  &_row {
+    display: flex;
+    margin-top: 50px;
+    gap: 30px;
+    img {
+      width: 33%;
+      cursor: pointer;
+    }
+  }
+}

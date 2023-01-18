@@ -1,7 +1,6 @@
 import React from 'react';
 import c from './Actual.module.scss'
 import ActualBanner from "./ActualBanner";
-import {actualContent_1} from "../../utils/list";
 import actualBackImg_1 from '../../images/actual-banner.webp'
 
 function Actual() {
@@ -18,7 +17,7 @@ function Actual() {
              <h1>Актуальные Подборки</h1>
            </div>
          </div>
-         <ActualBanner {...actualContent_1} background={actualBackImg_1}/>
+         <ActualBanner background={actualBackImg_1}/>
          {/* <ActualBanner {...actualContent_2} background={actualBackImg_2}/> */}
        </div>
      </div>

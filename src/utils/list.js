@@ -1,3 +1,6 @@
+import ContactData from '../components/ContactData/ContactData'
+import Gallery from '../components/Gallery/Gallery'
+import PhotoTea from '../components/PhotoTea/PhotoTea'
 import selectionsBack_1 from '../images/selections-banner-1.webp'
 import selectionsBack_2 from '../images/selections-banner-2.webp'
 import selectionsBack_3 from '../images/selections-banner-3.webp'
@@ -127,11 +130,6 @@ export const actual_card_1 = [
 
 
 
-export const actualContent_1 = {
-  type: '4 видов',
-  title: '«А что остальные берут?». Топ-4 чистые сорта',
-  text: 'Топ-4 чистых сортов. Классика, проверенная временем и выбором покупателей «Mirissa»',
-}
 
 
 export const actualContent_2 = {
@@ -253,6 +251,11 @@ export const forClient = [
     caption: "События",
     route:"/events"
   },
+  {
+    id:32,
+    caption: "Контакты",
+    route:"/contacts"
+  },
 ]
 
 export const burgerList = [
@@ -281,5 +284,267 @@ export const FilterList = [
     id:3,
     caption: "рейтинг",
     
+  },
+]
+
+
+
+export const locationList = [
+  {
+    id:1,
+    caption: "Народный 12 мн",
+    location: "ул.Нуркамала,29"
+  },
+  {
+    id:2,
+    caption: "Народный 9 мн",
+    location: "ул.Байтик Баатыра,6"
+  },
+  {
+    id:3,
+    caption: "Народный Аврора",
+    location: "мкр.Асанбай,52а"
+  },
+  {
+    id:4,
+    caption: "Народный Акун",
+    location: "пр.Мира,97/1"
+  },
+  {
+    id:5,
+    caption: "Народный Алматинская(БЧК)",
+    location: "ул.Нуркамала,29"
+  },
+  {
+    id:6,
+    caption: "Народный Антарес",
+    location: "ул.Ахунбаева,94А"
+  },
+  {
+    id:7,
+    caption: "Народный Асанбай-2",
+    location: "мкр.Асанбай,40/1"
+  },
+  {
+    id:8,
+    caption: "Народный Атыр",
+    location: "ул.Байтик Баатыра,9А"
+  },
+  {
+    id:9,
+    caption: "Магазин Бостери",
+    location: "с Бостери ул.Мамытова 100А"
+  },
+  {
+    id:10,
+    caption: "Народный Военторг",
+    location: "ул.Киевская, 114"
+  },
+  {
+    id:11,
+    caption: "Народный Восток-5",
+    location: "пр.Чуй,111"
+  },
+  {
+    id:12,
+    caption: "Народный Ден-Сяопина",
+    location: "ул.Ден-Сяопина,39"
+  },
+  {
+    id:13,
+    caption: "Народный Детский Мир",
+    location: "пр.Мира,29"
+  },
+  {
+    id:14,
+    caption: "Народный Джал",
+    location: "ул.Ахунбаева,196"
+  },
+  {
+    id:15,
+    caption: "Народный Джал-Автоград",
+    location: "ул.Ахунбаева,267"
+  },
+  {
+    id:16,
+    caption: "Народный Исанова",
+    location: "ул.Токтогула,161"
+  },
+  {
+    id:17,
+    caption: "Народный К.Акиева",
+    location: "ул.Токтогула,234"
+  },
+  {
+    id:18,
+    caption: "Магазин Кант",
+    location: "г.Кант, 74 ул.Ленина"
+  },
+  {
+    id:19,
+    caption: "Народный Кашка-Суу",
+    location: "ул.Ахунбаева,133"
+  },
+  {
+    id:20,
+    caption: "Народный Киевская-Турусбеков",
+    location: "ул.Турусбекова,82/1"
+  },
+  {
+    id:21,
+    caption: "Народный Курманжан Датка",
+    location: "ул.Фрунзе,165"
+  },
+  {
+    id:22,
+    caption: "Народный Лермонтова",
+    location: "ул.Лермонтова,33"
+  },
+  {
+    id:23,
+    caption: "Народный Манаса-Московская",
+    location: "ул.Московская,164"
+  },
+  {
+    id:24,
+    caption: "Народный Молодая Гвардия",
+    location: "ул.Молодая Гвардия,74"
+  },
+  {
+    id:25,
+    caption: "Народный Московская",
+    location: "ул.Московская,58"
+  },
+  {
+    id:26,
+    caption: "Народный Ново-Николаевка",
+    location: "ул.Западная,1"
+  },
+  {
+    id:27,
+    caption: "Народный Панфилова",
+    location: "ул.Панфилова,62"
+  },
+  {
+    id:28,
+    caption: "Народный Пишпек",
+    location: "ул.Льва Толстого,79"
+  },
+  {
+    id:29,
+    caption: "Народный Раэль",
+    location: "ул.Гагарина, 183"
+  },
+  {
+    id:30,
+    caption: "Народный Республиканская",
+    location: "ул.Жибек-Жолу,631"
+  },
+  {
+    id:31,
+    caption: "Народный Советская-Боконбаева",
+    location: "ул.Абрахманова,105"
+  },
+  {
+    id:32,
+    caption: "Народный Сонгер",
+    location: "ул.Жибек-Жолу,315"
+  },
+  {
+    id:33,
+    caption: "Народный Тоголок-Молдо",
+    location: "ул.Тоголок-Молдо,61"
+  },
+
+  {
+    id:34,
+    caption: "Народный Токтогула/Панфилова",
+    location: "ул.Токтогула,116"
+  },
+   {
+    id:35,
+    caption: "Магазин Тимирязева",
+    location: "ул.Московская 194/ Тимирязева"
+  },
+  {
+    id:36,
+    caption: "Народный Токмок",
+    location: "ул.Ибраимова,1"
+  },
+  {
+    id:37,
+    caption: "Народный Толкун",
+    location: "ул.Ахунбаева,134"
+  },
+  {
+    id:38,
+    caption: "Народный Улан",
+    location: "мкрн. Улан,д.7/1"
+  },
+  {
+    id:39,
+    caption: "Народный Уметалиева",
+    location: "ул.Уметалиева,152"
+  },
+  {
+    id:40,
+    caption: "Народный Фучика",
+    location: "ул.Ден-Сяопина,3"
+  },
+  {
+    id:41,
+    caption: "Народный ЦГ",
+    location: "пр.Чуй,162"
+  },
+  {
+    id:42,
+    caption: "Народный Чолпон-Ата",
+    location: "Г.Чолпон-Ата, ул.Советская б/н"
+  },
+  {
+    id:43,
+    caption: "Народный Шевченко",
+    location: "ул.Боконбаева 192/1"
+  },
+  {
+    id:44,
+    caption: "Народный Шопокова",
+    location: "ул.Токтогула 75/1"
+  },
+  {
+    id:45,
+    caption: "Народный Юнусалиева",
+    location: "ул.Юнусалиева, 86"
+  },
+  {
+    id:46,
+    caption: "Магазин Пишпек-Сити",
+    location: "ул.Льва Толстог, 120"
+  },
+  {
+    id:47,
+    caption: "Магазин ЮГ 2",
+    location: "Горького 29 / Тыныстанова 36"
+  },
+]
+
+export const tabList = [
+  {
+    id:1,
+    caption: "Фото чаев",
+    route: "PhotoTea",
+    element: PhotoTea
+  },
+  {
+    id:2,
+    caption: "Контактные данные",
+    route: "ContactData",
+    element: ContactData
+  },
+  {
+    id:3,
+    caption: "Галерея",
+    route: "Gallery",
+    element: Gallery
   },
 ]

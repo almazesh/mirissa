@@ -5,8 +5,14 @@ import c from "./index.module.scss"
 
 import GalleryOne from "../../images/about/DSC03508 2.png"
 import GalleryTwo from "../../images/about/DSC03508 3.png"
+import { ScrollToTop } from '../../helpers/scroll'
 
 const About = () => {
+
+  React.useEffect(() => {
+    ScrollToTop()
+  }, [])
+  
   return (
     <div className={c.about_page}>
       <div className={c.about_container}>
@@ -42,7 +48,7 @@ const About = () => {
           </div>
           <div className={c.about_history_content}>
             <div>
-              <img src={GalleryOne} alt=''/>
+              <img src={GalleryOne} alt=''/>  
             </div>
 
             <div className={c.about_row}>

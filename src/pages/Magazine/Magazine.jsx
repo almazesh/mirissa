@@ -1,13 +1,22 @@
 
 
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { Loader } from '../../components/Loader/Loader'
 import ViewsTea from '../../components/ViewsTea/ViewsTea'
-import MagazineImg from "../../images/magazine/16ee22f1579a8a2c-2167-1.png"
+import { ScrollToTop } from '../../helpers/scroll'
+import useData from '../../hooks/useData'
 
 import c from "./index.module.scss"
 
 
 const Magazine = () => {
+  const { actual } = useData();
+
+  React.useEffect(() => {
+    ScrollToTop()
+  }, [])
+
   return (
     <div className={c.magazine_container}>
       <div className={c.magazine_title}>
@@ -20,18 +29,17 @@ const Magazine = () => {
         <h2>Подборки</h2>
 
         <div className={c.magazine_row}>
-          <div className={c.card}>
-            <img src={MagazineImg} alt=''/>
-          </div>
-          <div className={c.card}>
-            <img src={MagazineImg} alt=''/>
-          </div>
-          <div className={c.card}>
-            <img src={MagazineImg} alt=''/>
-          </div>
-          <div className={c.card}>
-            <img src={MagazineImg} alt=''/>
-          </div>
+          {actual?.length === 0 && <p>Empty</p>}
+
+          {!actual && <Loader />}
+
+          {actual?.map(item => (
+            <Link to={`/magazine/${item.id}`}>
+              <div key={item.id} className={c.card}>
+                <img src={item.image} alt=''/>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </div>

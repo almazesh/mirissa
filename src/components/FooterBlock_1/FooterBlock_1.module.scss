@@ -29,6 +29,12 @@
       color: #27160e;
       font-size: 15px;
       margin: 0 0 10px;
+
+      a {
+        &:hover {
+          color: #4D1200;
+        }
+      }
     }
     .login_btn{
       color: #27160e;
