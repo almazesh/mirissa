@@ -19,6 +19,7 @@ function App() {
         <Route path="/events" element={<LayoutPages.Events />}/>
         <Route path="/locations" element={<LayoutPages.Locations />}/>
         <Route path="/contacts" element={<LayoutPages.Contacts />}/>
+        <Route path="/favorites" element={<LayoutPages.Favorites />}/>
       </Routes>
       <FooterTop />
       <FooterBottom />

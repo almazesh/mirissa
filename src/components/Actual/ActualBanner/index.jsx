@@ -8,8 +8,6 @@ import c from './ActualBanner.module.scss'
 function ActualBanner({background}) {
   const { actual } = useData();
 
-  console.log(actual)
-
   return (
     <div className={c.actual}>
       <div

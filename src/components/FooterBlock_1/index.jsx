@@ -10,7 +10,11 @@ function FooterTop() {
         <h1>Контакты</h1>
         {
           contactsList.map((item, id) => (
-            <li key={id}>{item}</li>
+            <li key={id}>
+              <Link to={item.route}>
+                {item.caption}
+              </Link>
+            </li>
           ))
         }
       </ul>
@@ -18,15 +22,11 @@ function FooterTop() {
         <h1>О компании</h1>
         {
           aboutCompanyList.map((item, id) => (
-            <li key={id}>{item}</li>
-          ))
-        }
-      </ul>
-      <ul className={c.footer_list}>
-        <h1>Бизнесу</h1>
-        {
-          business.map((item, id) => (
-            <li key={id}>{item}</li>
+            <li key={id}>
+              <Link to={item.route}>
+                {item.caption}
+              </Link>
+            </li>
           ))
         }
       </ul>

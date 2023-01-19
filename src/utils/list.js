@@ -221,24 +221,31 @@ export const news_list = [
 ]
 
 export const contactsList = [
-  'Контакты',
-  'Магазины',
-  'Офисы',
+  {
+    id:23,
+    caption:'Магазины',
+    route:"/locations"
+  },
+  {
+    id:32,
+    caption: "Контакты",
+    route:"/contacts"
+  },
 ]
 
 export const aboutCompanyList = [
-  'Блог',
-  'Вакансии',
-  'Чайный лист',
-  'Библиотека',
-  'О нас',
+  {
+    id:1,
+    caption: "О нас",
+    route: "/about"
+  },
+  {
+    id:13,
+    caption: "Наши Чаи",
+    route: "/catalog/tea"
+  },
 ]
 
-export const business = [
-  'Поставщикам',
-  'Франчайзинг',
-  'Корпоративные подарки',
-]
 
 export const forClient = [
   {
@@ -251,11 +258,7 @@ export const forClient = [
     caption: "События",
     route:"/events"
   },
-  {
-    id:32,
-    caption: "Контакты",
-    route:"/contacts"
-  },
+
 ]
 
 export const burgerList = [

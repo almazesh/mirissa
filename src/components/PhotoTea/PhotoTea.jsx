@@ -2,10 +2,15 @@ import React from 'react'
 
 import c from "./index.module.scss"
 
-import Tea1 from "../../images/magazine/IMG_9407.png"
-import Tea2 from "../../images/magazine/IMG_9960.png"
+
+import useData from '../../hooks/useData'
+import { Loader } from '../Loader/Loader'
 
 const PhotoTea = () => {
+  const { marketPhoto } = useData();
+
+  console.log(marketPhoto)
+
   return (
     <div className={c.photo_parent}>
       <div className={c.photo_parent_title}>
@@ -13,8 +18,11 @@ const PhotoTea = () => {
       </div>
 
       <div className={c.photo_parent_row}>
-        <img src={Tea1} alt=''/>
-        <img src={Tea2} alt=''/>
+        {marketPhoto?.length === 0 && <p>Empty</p>}
+
+        {!marketPhoto && <Loader />}
+
+        {marketPhoto?.map(item => <img key={item.id} src={item.image} alt=''/>)}
       </div>
     </div>
   )
