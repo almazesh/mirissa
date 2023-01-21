@@ -1,16 +1,18 @@
 import React from 'react';
 import c from "../Banner.module.scss";
-import {sliderCard} from "../../../utils/list";
 import SliderCard from "../SliderCard";
 import {Swiper, SwiperSlide} from "swiper/react";
-import {Autoplay, EffectFade, Pagination} from "swiper";
+import {Autoplay, Pagination} from "swiper";
 
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 
-function CardSlider(props) {
+import useData from "../../../hooks/useData";
+
+function CardSlider() {
+  const {catalog} = useData()
   return (
     <div className={c.slider_card}>
       <Swiper
@@ -28,7 +30,7 @@ function CardSlider(props) {
         }}
       >
         {
-          sliderCard.map(item => {
+          catalog?.map(item => {
             return (
               <SwiperSlide key={item.id}>
                 <SliderCard  {...item}/>

@@ -36,7 +36,7 @@ const About = () => {
       <div className={c.about_gallery}>
         <div className={c.about_container}>
           <div className={c.about_gallery_row}>
-            {sliderImg.map(item => <img src={item.url} alt=''/>)}
+            {sliderImg.map(item => <img src={item.url} alt='' key={item.id}/>)}
           </div>
         </div>
       </div>

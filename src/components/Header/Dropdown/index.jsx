@@ -1,6 +1,7 @@
 import React from 'react';
 import c from './Dropdown.module.scss'
-import {burgerList} from "../../../utils/list";
+import {burgerList, navbarList} from "../../../utils/list";
+import {NavLink} from "react-router-dom";
 
 function Dropdown({active, setActive}) {
   return (
@@ -8,9 +9,14 @@ function Dropdown({active, setActive}) {
       <div className={c.dropdown_content}>
         <ul className={c.list}>
           {
-            burgerList.map((item, id) => (
-              <li key={id}>
-                {item}
+            navbarList.map((item, id) => (
+              <li key={id} onClick={() => setActive(false)}>
+                <NavLink
+                  className={({isActive}) => isActive ? c.activeList : ""}
+                  to={item.route}
+                >
+                  {item.title}
+                </NavLink>
               </li>
             ))
           }

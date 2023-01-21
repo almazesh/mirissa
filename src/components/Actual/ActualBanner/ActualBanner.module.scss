@@ -26,6 +26,9 @@
       @media (max-width: 768px) {
         font-size: 24px;
       }
+      @media (max-width: 425px) {
+        margin-left: 0;
+      }
     }
 
     p {
@@ -44,9 +47,13 @@
 
   .cards {
     display: flex;
-    height: 300px;
     justify-content: space-between;
-
+    @media (max-width: 768px) {
+      height: 200px;
+    }
+    @media (max-width: 425px) {
+      flex-wrap: wrap;
+    }
     .cards_item:nth-last-child(1) {
       @media (max-width: 1150px) {
         display: none;
@@ -64,6 +71,9 @@
 .more {
   text-align: center;
   margin-top: 30px;
+  @media (max-width: 425px) {
+    margin-top: 180px;
+  }
   a {
     height: 60px;
     position: relative;
@@ -74,7 +84,6 @@
     font-size: 13px;
     font-weight: 400;
     letter-spacing: 1.86px;
-    line-height: 18px;
     text-transform: uppercase;
     line-height: 60px;
     margin-top: 30px;

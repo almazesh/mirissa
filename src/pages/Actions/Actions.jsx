@@ -21,7 +21,9 @@ const Actions = () => {
       <div className={c.actions_container_row}>
       {
             stockCards.map(item => (
-              <StockCard  {...item}/>
+              <div key={item.id}>
+                <StockCard  {...item}/>
+              </div>
             ))
           }
       </div>

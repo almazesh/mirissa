@@ -5,12 +5,37 @@ import { FilterList } from '../../utils/list';
 import CatalogCard from './CatalogCard/CatalogCard';
 
 import c from "./index.module.scss"
+import useData from "../../hooks/useData";
 
 const Catalog = () => {
+
+  const [singleFavorite, setSingleFavorite] = React.useState(null)
+  const [removeSingleFavorite, setRemoveSingleFavorite] = React.useState(null)
+  const [reload, setReload] = React.useState(1)
+  const {catalog} = useData()
+
 
   React.useEffect(() => {
     ScrollToTop()
   }, [])
+  
+  
+  React.useEffect(() => {
+    const favorite = JSON.parse(localStorage.getItem('favorites'))
+    
+    const check = favorite.find(item => item?.id === singleFavorite?.id)
+    check === undefined && favorite.push(singleFavorite)
+    localStorage.setItem('favorites', JSON.stringify(favorite))
+  }, [singleFavorite])
+
+  
+  React.useEffect(() => {
+    const favorite = JSON.parse(localStorage.getItem('favorites'))
+    const filter = favorite.filter(item => item?.id !== removeSingleFavorite?.id)
+    const checkOfNull = filter.filter(item => item !== null)
+    localStorage.setItem('favorites', JSON.stringify(checkOfNull))
+    
+  }, [removeSingleFavorite])
 
   return (
     <div className={c.container}>
@@ -31,10 +56,18 @@ const Catalog = () => {
           </ul>
         </div>
         <div className={c.catalog_row}>
-          <CatalogCard />
-          <CatalogCard />
-          <CatalogCard />
-          <CatalogCard />
+          {
+            catalog?.map(item => (
+              <CatalogCard
+                {...item}
+                key={item.id}
+                setSingle={setSingleFavorite}
+                itemObj={item}
+                setRemove={setRemoveSingleFavorite}
+                setReload={setReload}
+              />
+            ))
+          }
         </div>
       </div>
     </div>  

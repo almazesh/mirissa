@@ -5,6 +5,12 @@ import Header from "./components/Header";
 import * as LayoutPages from "./pages"
 
 function App() {
+  const favorites = JSON.parse(localStorage.getItem('favorites'))
+  
+  if(!favorites){
+    localStorage.setItem('favorites', JSON.stringify([]))
+  }
+  
   return (
     <div className="App">
       <Header/>
@@ -20,6 +26,8 @@ function App() {
         <Route path="/locations" element={<LayoutPages.Locations />}/>
         <Route path="/contacts" element={<LayoutPages.Contacts />}/>
         <Route path="/favorites" element={<LayoutPages.Favorites />}/>
+        <Route path="/products/:id" element={<LayoutPages.ProductMore />}/>
+        <Route path="/contests" element={<LayoutPages.Contests />}/>
       </Routes>
       <FooterTop />
       <FooterBottom />

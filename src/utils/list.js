@@ -28,6 +28,11 @@ export const navbarList = [
     id:3,
     title: 'Знак высокого качества',
     route: '/quality'
+  },
+  {
+    id:4,
+    title: 'Акции',
+    route: '/contests'
   }
 ]
 

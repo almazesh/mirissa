@@ -8,6 +8,8 @@ import Locations from "./Locations/Locations"
 import Magazine from "./Magazine/Magazine"
 import Main from "./Main"
 import QualityPage from "./Quality/QualityPage"
+import ProductMore from "./ProductMore";
+import Contests from "./Contests";
 
 
 export {
@@ -20,6 +22,7 @@ export {
   Events,
   Locations,
   Contacts,
-  Favorites
-
+  Favorites,
+  ProductMore,
+  Contests,
 }

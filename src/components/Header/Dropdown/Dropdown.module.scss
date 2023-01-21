@@ -2,7 +2,7 @@
   position: absolute;
   background-color: white;
   width: 70%;
-  height: 470px;
+  height: 400px;
   z-index: 500;
   top: 85px;
   left: -1000px;
@@ -21,6 +21,20 @@
         margin-right: 16px;
         margin-bottom: 50px;
         font-size: 18px;
+        .activeList {
+          white-space: nowrap;
+          display: inline-block;
+          padding: 8px 15px;
+          background-color: #4D1200;
+          font-family: Circe, sans-serif;
+          font-size: 13px;
+          font-weight: 400;
+          text-transform: uppercase;
+          color: #fff;
+          &:hover {
+            color: white;
+          }
+        }
       }
     }
   }

@@ -3,7 +3,9 @@
 .magazineCard {
   width: 25%;
   cursor: pointer;
-
+  @media (max-width: 425px){
+    width: 50%;
+  }
   img {
     width: 100%;
     object-fit: contain;

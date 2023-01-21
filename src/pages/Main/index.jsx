@@ -18,11 +18,8 @@ function Main() {
       <Banner/>
       <Actual/>
       <Stocks/>
-      {/*<TeaSelections/>*/}
-      {/*<Services/>*/}
       <News/>
       <Form/>
-      
     </div>
   );
 }

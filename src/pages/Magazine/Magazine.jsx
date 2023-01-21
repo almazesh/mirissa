@@ -34,7 +34,7 @@ const Magazine = () => {
           {!actual && <Loader />}
 
           {actual?.map(item => (
-            <Link to={`/magazine/${item.id}`}>
+            <Link to={`/magazine/${item.id}`} key={item.id}>
               <div key={item.id} className={c.card}>
                 <img src={item.image} alt=''/>
               </div>
