@@ -1,5 +1,11 @@
 .header {
   position: relative;
+  .snow_container{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    overflow: hidden;
+  }
 
   .snow {
     position: absolute;
@@ -3042,7 +3048,7 @@
         width: 330px;
         top: -80px;
         transform: translateX(-50%);
-        left: 53%;
+        left: 50%;
       }
       @media (max-width: 425px) {
         left: 50%;
@@ -3124,7 +3130,7 @@
       }
 
       @media (max-width: 1024px) {
-        margin-left: 200px;
+        margin-left: 170px;
       }
       @media (max-width: 768px) {
         margin-left: 75px;

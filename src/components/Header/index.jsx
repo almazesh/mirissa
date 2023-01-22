@@ -35,7 +35,9 @@ function Header() {
   
   return (
     <div className={c.header}>
-      {/*{Array.from({length:199}).map((item,index) => <div key={index} className={c.snow}></div>)}*/}
+      <div className={c.snow_container}>
+        {Array.from({length:199}).map((item,index) => <div key={index} className={c.snow}></div>)}
+      </div>
       <div className={c.container}>
         <img className={c.tree} src={Tree} alt=''/>
         <span
