@@ -36,7 +36,9 @@ const Catalog = () => {
     localStorage.setItem('favorites', JSON.stringify(checkOfNull))
     
   }, [removeSingleFavorite])
-
+  
+  console.log(catalog)
+  
   return (
     <div className={c.container}>
       <div className={c.catalog_title}>

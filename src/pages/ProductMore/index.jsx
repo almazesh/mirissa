@@ -51,7 +51,7 @@ function ProductMore() {
         <div className={c.more_slider}>
           <Swiper
             slidesPerView={1}
-            spaceBetween={50}
+            spaceBetween={30}
             loop={true}
             loopFillGroupWithBlank={true}
             pagination={{
@@ -66,7 +66,7 @@ function ProductMore() {
           >
             {
               product?.product_images?.map(item => (
-                <SwiperSlide key={item.id}>
+                <SwiperSlide key={item.id} className={c.swiper_height}>
                   <img src={item.image} alt="" />
                 </SwiperSlide>
               ))

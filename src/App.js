@@ -28,7 +28,7 @@ function App() {
         <Route path="/favorites" element={<LayoutPages.Favorites />}/>
         <Route path="/products/:id" element={<LayoutPages.ProductMore />}/>
         <Route path="/contests" element={<LayoutPages.Contests />}/>
-        <Route path="/discounts" element={<LayoutPages.Discounts />}/>
+        <Route path="/discounts/:id" element={<LayoutPages.Discounts />}/>
       </Routes>
       <FooterTop />
       <FooterBottom />

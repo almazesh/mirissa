@@ -11,8 +11,9 @@ import {GET_DISCOUNTS} from "../../api/api";
 function Stocks() {
   const [data, setData] = React.useState(null)
   React.useEffect(() => {
-    GET_DISCOUNTS().then(r => console.log(r.data))
+    GET_DISCOUNTS().then(r => setData(r.data))
   }, [])
+  
   return (
     <div
       className={c.stock}
@@ -69,7 +70,7 @@ function Stocks() {
           }}
         >
           {
-            stockCards.map(item => (
+            data?.map(item => (
               <SwiperSlide key={item.id} className={c.every_swiper}>
                 <StockCard  {...item}/>
               </SwiperSlide>

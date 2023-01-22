@@ -1,17 +1,20 @@
 import React from 'react';
 import c from './Discounts.module.scss'
 import {GET_SINGLE_DISCOUNTS} from "../../api/api";
+import {useParams} from "react-router-dom";
 
 function Discounts() {
   const [data, setData] = React.useState(null)
+  const {id} = useParams()
   React.useEffect(() => {
-    GET_SINGLE_DISCOUNTS(1).then(r => setData(r.data))
+    GET_SINGLE_DISCOUNTS(parseInt(id)).then(r => setData(r.data))
   }, [])
+  console.log(data)
   
   return (
     <div className={c.discounts}>
       <div className={c.discounts_title}>
-        <h1>Скидки и Акции</h1>
+        <h2>{data?.description}</h2>
       </div>
     </div>
   );

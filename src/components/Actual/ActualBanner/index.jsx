@@ -7,7 +7,7 @@ import c from './ActualBanner.module.scss'
 
 function ActualBanner({background}) {
   const { actual } = useData();
-
+  
   return (
     <div className={c.actual}>
       <div

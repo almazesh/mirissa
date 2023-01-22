@@ -3035,7 +3035,8 @@
     margin: 30px auto 0;
     padding: 0 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 50px;
     align-items: center;
     color: #543019;
     position: relative;
@@ -3044,7 +3045,8 @@
       position: absolute;
       width: 400px;
       top: -110%;
-      left: 32%;
+      left: 50%;
+      transform: translateX(-50%);
       @media (max-width: 1024px) {
         width: 330px;
         top: -80px;
@@ -3070,7 +3072,7 @@
 
     .nav_list {
       display: flex;
-      gap: 10px;
+      gap: 20px;
       align-items: center;
       @media (max-width: 1024px) {
         display: none;
@@ -3129,7 +3131,6 @@
         cursor: pointer;
         object-fit: contain;
       }
-
       @media (max-width: 1024px) {
         margin-left: 170px;
       }

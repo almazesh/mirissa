@@ -3,24 +3,25 @@ import c from './StockCard.module.scss'
 import {useNavigate} from "react-router-dom";
 
 
-function StockCard({title, text}) {
+function StockCard({description, id}) {
   const navigate = useNavigate()
+  
   return (
     <>
       <div className={c.stock_card}>
         <img className={c.back_img} src="/assets/slider-card-img.webp" alt="" />
         <div className={c.title}>
-          <h2>
-            {title}
-          </h2>
+          <h3>
+            {description}
+          </h3>
         </div>
-        <div className={c.text}>
-          <p>
-            {text}
-          </p>
-        </div>
+        {/*<div className={c.text}>*/}
+        {/*  <p>*/}
+        {/*    {text}*/}
+        {/*  </p>*/}
+        {/*</div>*/}
         <div className={c.btn}>
-          <button onClick={() => navigate('/discounts')}>
+          <button onClick={() => navigate(`/discounts/${id}`)}>
             подробнее
           </button>
         </div>

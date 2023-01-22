@@ -12,6 +12,26 @@ import "swiper/css/effect-fade";
 import useData from "../../../hooks/useData";
 
 function CardSlider() {
+  const [singleFavorite, setSingleFavorite] = React.useState(null)
+  const [removeSingleFavorite, setRemoveSingleFavorite] = React.useState(null)
+  const [reload, setReload] = React.useState(1)
+  
+  React.useEffect(() => {
+    const favorite = JSON.parse(localStorage.getItem('favorites'))
+    
+    const check = favorite.find(item => item?.id === singleFavorite?.id)
+    check === undefined && favorite.push(singleFavorite)
+    localStorage.setItem('favorites', JSON.stringify(favorite))
+  }, [singleFavorite])
+  
+  React.useEffect(() => {
+    const favorite = JSON.parse(localStorage.getItem('favorites'))
+    const filter = favorite.filter(item => item?.id !== removeSingleFavorite?.id)
+    const checkOfNull = filter.filter(item => item !== null)
+    localStorage.setItem('favorites', JSON.stringify(checkOfNull))
+    
+  }, [removeSingleFavorite])
+  
   const {catalog} = useData()
   return (
     <div className={c.slider_card}>
@@ -33,7 +53,13 @@ function CardSlider() {
           catalog?.map(item => {
             return (
               <SwiperSlide key={item.id}>
-                <SliderCard  {...item}/>
+                <SliderCard
+                  {...item}
+                  setSingle={setSingleFavorite}
+                  itemObj={item}
+                  setRemove={setRemoveSingleFavorite}
+                  setReload={setReload}
+                />
               </SwiperSlide>
             )
           })

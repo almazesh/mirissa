@@ -250,11 +250,6 @@ export const aboutCompanyList = [
 
 export const forClient = [
   {
-    id:3,
-    title: 'Конкурсы',
-    route: '/contests'
-  },
-  {
     id:1,
     caption: "Скидки и акции",
     route:"/actions"
@@ -264,7 +259,11 @@ export const forClient = [
     caption: "События",
     route:"/events"
   },
-  
+  {
+    id:3,
+    caption: 'Конкурсы',
+    route: '/contests'
+  },
 ]
 
 export const burgerList = [
