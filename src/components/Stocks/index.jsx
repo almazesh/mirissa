@@ -6,9 +6,13 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import {Pagination, Autoplay} from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
+import {GET_DISCOUNTS} from "../../api/api";
 
 function Stocks() {
-  
+  const [data, setData] = React.useState(null)
+  React.useEffect(() => {
+    GET_DISCOUNTS().then(r => console.log(r.data))
+  }, [])
   return (
     <div
       className={c.stock}

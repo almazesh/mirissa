@@ -18,16 +18,16 @@ function ContestsBlock({data, selectedDate,setSelectedDate, filteredData }) {
             </div>
           ))
         }
-        {
-          Array(15).fill(0).map((_, i) => (
-            <div
-              className={c.all_date}
-              key={i}
-            >
-              2022-12-20
-            </div>
-          ))
-        }
+        {/*{*/}
+        {/*  Array(15).fill(0).map((_, i) => (*/}
+        {/*    <div*/}
+        {/*      className={c.all_date}*/}
+        {/*      key={i}*/}
+        {/*    >*/}
+        {/*      2022-12-20*/}
+        {/*    </div>*/}
+        {/*  ))*/}
+        {/*}*/}
       </div>
     
       <div className={c.contests_card}>

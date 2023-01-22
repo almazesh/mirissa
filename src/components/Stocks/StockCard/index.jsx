@@ -1,8 +1,10 @@
 import React from 'react';
 import c from './StockCard.module.scss'
+import {useNavigate} from "react-router-dom";
 
 
 function StockCard({title, text}) {
+  const navigate = useNavigate()
   return (
     <>
       <div className={c.stock_card}>
@@ -18,7 +20,7 @@ function StockCard({title, text}) {
           </p>
         </div>
         <div className={c.btn}>
-          <button>
+          <button onClick={() => navigate('/discounts')}>
             подробнее
           </button>
         </div>

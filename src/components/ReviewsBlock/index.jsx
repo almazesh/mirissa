@@ -10,14 +10,23 @@ function ReviewsBlock({id, review, modal, setModal}) {
   
   
   const handleAdd = () => {
-    setModal(false)
     POST_REVIEW({
       name,
       comment,
       product: parseInt(id),
       rating: `${star}`,
-    }).then(r => console.log(r))
+    }).then()
+    setModal(false)
   }
+  
+  React.useEffect(() => {
+    POST_REVIEW({
+      name,
+      comment,
+      product: parseInt(id),
+      rating: `${star}`,
+    }).then()
+  }, [modal])
   
   return (
     <div className={c.reviews}>
@@ -29,7 +38,7 @@ function ReviewsBlock({id, review, modal, setModal}) {
       <div className={c.user_reviews}>
         <div className={c.review_block}>
           {
-            review?.map(item => (
+            review?.reverse().map(item => (
               <div className={c.review_block_item} key={item.id}>
                 <div className={c.block_top}>
                   <p>{item.name}</p>

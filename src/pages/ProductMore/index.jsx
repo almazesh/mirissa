@@ -42,7 +42,7 @@ function ProductMore() {
           </span>
           <span className={c.stars_count}>
             {
-              product?.total_review
+              Math.trunc( product?.total_review * 100 ) / 100
             }
           </span>
         </div>
