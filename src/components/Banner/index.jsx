@@ -12,9 +12,10 @@ import "swiper/css/effect-fade";
 import CardSlider from "./CardSlider";
 import Fact from '../Fact/Fact';
 import Quality from '../Quality/Quality';
+import {useNavigate} from "react-router-dom";
 
 function Banner() {
-  
+  const navigate = useNavigate()
   return (
     <div className={c.banner}>
       <div className={c.banner_slider}>
@@ -40,7 +41,7 @@ function Banner() {
                     <div style={{background: `url("${item.url}") center / cover`}} className={c.slider_content}>
                       <h1>{item.title}</h1>
                       <span>{item.text}</span>
-                      <button>Подробнее</button>
+                      <button onClick={() => navigate('/contests')}>Подробнее</button>
                     </div>
                   </SwiperSlide>
                 )

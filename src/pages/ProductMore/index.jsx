@@ -10,6 +10,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import ReviewsBlock from "../../components/ReviewsBlock";
+import {AiFillStar, AiOutlineStar} from "react-icons/ai";
 
 function ProductMore() {
   const {id} = useParams()
@@ -27,6 +28,24 @@ function ProductMore() {
         <h2>
           {product?.title}
         </h2>
+        <div>
+          <span className={c.more_stars}>
+            {
+              Array(5).fill(0).map((_, i) => (
+                <span key={i}>
+                 {
+                   product?.total_review > i ?  <AiFillStar/> :  <AiOutlineStar/>
+                 }
+              </span>
+              ))
+            }
+          </span>
+          <span className={c.stars_count}>
+            {
+              product?.total_review
+            }
+          </span>
+        </div>
       </div>
       <div className={c.more_content}>
         <div className={c.more_slider}>

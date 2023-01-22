@@ -26,7 +26,7 @@ function SliderCard({title, product_images, price, id}) {
           <span>
             <HiOutlineShoppingBag/>
           </span>
-          в корзину
+          в избранные
         </button>
       </div>
     </div>

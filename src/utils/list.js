@@ -29,11 +29,6 @@ export const navbarList = [
     title: 'Знак высокого качества',
     route: '/quality'
   },
-  {
-    id:4,
-    title: 'Акции',
-    route: '/contests'
-  }
 ]
 
 export const facts_list = [
@@ -79,8 +74,9 @@ export const sliderImg = [
   },
   {
     url: '/assets/right-slider-3.jpg',
-    title: 'Новогодние  подарки',
-    text: 'Коллегам, друзьям, близким. Доставим вам или от вашего имени. '
+    title: 'Конкурсы',
+    text: 'Коллегам, друзьям, близким. Доставим вам или от вашего имени. ',
+    route: '/contests',
   },
   
 ]
@@ -254,16 +250,21 @@ export const aboutCompanyList = [
 
 export const forClient = [
   {
+    id:3,
+    title: 'Конкурсы',
+    route: '/contests'
+  },
+  {
     id:1,
     caption: "Скидки и акции",
     route:"/actions"
   },
   {
-    id:1231,
+    id:2,
     caption: "События",
     route:"/events"
   },
-
+  
 ]
 
 export const burgerList = [
