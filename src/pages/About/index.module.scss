@@ -170,13 +170,13 @@
             cursor: pointer;
             shape-outside: url("../../73-736750_margot-robbie-hair-margot-robbie-style-actress-margot-removebg-preview.png");
             width: 350px;
-            shape-margin: 10px;
+            shape-margin: 30px;
             margin: 10px;
             margin-bottom: 0;
-            border-radius: 50% 30% 70%;
+            border-radius: 70% 30% 70%;
             height: 350px;
             object-fit: cover;
-            object-position: top;
+            object-position: bottom;
             @media (max-width: 768px) {
               width: 250px;
             }

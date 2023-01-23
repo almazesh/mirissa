@@ -9,9 +9,9 @@ function Actual() {
      <div className={c.actual}>
        <div className={c.container}>
          <div className={c.title_container}>
-           <span>5</span>
+           <span>3</span>
            <p className={c.actual_history}>
-             5 лет мы занимаемся чаем. Из самых популярных запросов мы составили тематические подборки. Ищите и находите нужный чай для разных ситуаций.
+             3 года мы занимаемся чаем. Из самых популярных запросов мы составили тематические подборки. Ищите и находите нужный чай для разных ситуаций.
            </p>
            <div className={c.title}>
              <h1>Актуальные Подборки</h1>

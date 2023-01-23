@@ -7,6 +7,8 @@ import GalleryOne from "../../images/about/DSC03508 2.png"
 import GalleryTwo from "../../images/about/DSC03508 3.png"
 import { ScrollToTop } from '../../helpers/scroll'
 
+import Zhami from "../../2023-01-22 19.34.13.jpg"
+
 const About = () => {
 
   React.useEffect(() => {
@@ -53,7 +55,7 @@ const About = () => {
 
             <div className={c.about_row}>
               <div className={c.right}>
-                <img src='https://www.pngkey.com/png/full/73-736750_margot-robbie-hair-margot-robbie-style-actress-margot.png' alt=''/>
+                <img src={Zhami} alt=''/>
               </div>
               <div className={c.left}>
                 <h2>- Жамилия Молдолиева</h2>
