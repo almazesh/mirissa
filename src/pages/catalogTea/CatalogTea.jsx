@@ -6,6 +6,7 @@ import CatalogCard from './CatalogCard/CatalogCard';
 
 import c from "./index.module.scss"
 import useData from "../../hooks/useData";
+import {Loader} from "../../components/Loader/Loader";
 
 const Catalog = () => {
 
@@ -37,8 +38,6 @@ const Catalog = () => {
     
   }, [removeSingleFavorite])
   
-  console.log(catalog)
-  
   return (
     <div className={c.container}>
       <div className={c.catalog_title}>
@@ -59,6 +58,7 @@ const Catalog = () => {
         </div>
         <div className={c.catalog_row}>
           {
+            !catalog ? <Loader/> :
             catalog?.map(item => (
               <CatalogCard
                 {...item}
@@ -67,6 +67,7 @@ const Catalog = () => {
                 itemObj={item}
                 setRemove={setRemoveSingleFavorite}
                 setReload={setReload}
+                page={'catalog'}
               />
             ))
           }

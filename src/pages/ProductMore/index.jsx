@@ -11,6 +11,7 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import ReviewsBlock from "../../components/ReviewsBlock";
 import {AiFillStar, AiOutlineStar} from "react-icons/ai";
+import {Loader} from "../../components/Loader/Loader";
 
 function ProductMore() {
   const {id} = useParams()
@@ -22,6 +23,7 @@ function ProductMore() {
   }, [modal])
   
   console.log(product)
+  if(!product) return <Loader/>
   return (
     <div className={c.more}>
       <div className={c.more_title}>
@@ -107,7 +109,7 @@ function ProductMore() {
                   <span>Вид</span>
                 </p>
                 <div>
-                  {product?.country}
+                  {product?.view.title}
                 </div>
               </li>
               <li>

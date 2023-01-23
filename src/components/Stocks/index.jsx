@@ -7,6 +7,7 @@ import {Pagination, Autoplay} from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import {GET_DISCOUNTS} from "../../api/api";
+import {Loader} from "../Loader/Loader";
 
 function Stocks() {
   const [data, setData] = React.useState(null)
@@ -14,6 +15,8 @@ function Stocks() {
     GET_DISCOUNTS().then(r => setData(r.data))
   }, [])
   
+  
+  if(!data) return <Loader/>
   return (
     <div
       className={c.stock}
@@ -33,7 +36,7 @@ function Stocks() {
             clickable: true,
           }}
           autoplay={{
-            delay: 2500,
+            delay: 3500,
             disableOnInteraction: false,
           }}
           modules={[Pagination, Autoplay]}

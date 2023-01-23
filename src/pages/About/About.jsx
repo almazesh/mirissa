@@ -38,7 +38,7 @@ const About = () => {
       <div className={c.about_gallery}>
         <div className={c.about_container}>
           <div className={c.about_gallery_row}>
-            {sliderImg.map(item => <img src={item.url} alt='' key={item.id}/>)}
+            {sliderImg.map((item, i) => <img src={item.url} alt='' key={i}/>)}
           </div>
         </div>
       </div>
@@ -70,7 +70,7 @@ const About = () => {
               </div>
             </div>
             <div className={c.fact}>
-              {facts_list.map(item => <img src={item.img} alt=""/>)}
+              {facts_list.map(item => <img src={item.img} alt="" key={item.id}/>)}
             </div>
             <div>
               <img src={GalleryTwo} alt=""/>
