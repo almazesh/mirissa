@@ -10,6 +10,7 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 
 import useData from "../../../hooks/useData";
+import {Loader} from "../../Loader/Loader";
 
 function CardSlider() {
   const [singleFavorite, setSingleFavorite] = React.useState(null)
@@ -33,6 +34,7 @@ function CardSlider() {
   }, [removeSingleFavorite])
   
   const {catalog} = useData()
+  if (!catalog) return <Loader/>
   return (
     <div className={c.slider_card}>
       <Swiper

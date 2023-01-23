@@ -1,5 +1,6 @@
 import React from 'react';
 import c from './ContestsBlock.module.scss'
+import {Loader} from "../Loader/Loader";
 
 function ContestsBlock({data, selectedDate,setSelectedDate, filteredData }) {
   return (
@@ -18,20 +19,11 @@ function ContestsBlock({data, selectedDate,setSelectedDate, filteredData }) {
             </div>
           ))
         }
-        {/*{*/}
-        {/*  Array(15).fill(0).map((_, i) => (*/}
-        {/*    <div*/}
-        {/*      className={c.all_date}*/}
-        {/*      key={i}*/}
-        {/*    >*/}
-        {/*      2022-12-20*/}
-        {/*    </div>*/}
-        {/*  ))*/}
-        {/*}*/}
       </div>
     
       <div className={c.contests_card}>
         {
+          !filteredData ? <Loader/> :
           filteredData?.map(item => (
             <div className={c.contests_item} key={item.id}>
               <div className={c.item_img}>

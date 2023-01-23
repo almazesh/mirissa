@@ -2,7 +2,6 @@ import React from 'react'
 
 import c from "./Favorites.module.scss"
 import CatalogCard from "../catalogTea/CatalogCard/CatalogCard";
-import useData from "../../hooks/useData";
 
 function Favorites() {
   const [products, setProducts] = React.useState(null)
@@ -40,6 +39,7 @@ function Favorites() {
                 itemObj={item}
                 setRemove={setRemoveSingleFavorite}
                 setReload={setReload}
+                page={'favorites'}
               />
             ))
             : <h4 className={c.favorites_message}>У вас нет избранных товаров</h4>
