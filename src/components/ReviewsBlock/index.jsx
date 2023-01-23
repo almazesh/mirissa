@@ -19,15 +19,6 @@ function ReviewsBlock({id, review, modal, setModal}) {
     setModal(false)
   }
   
-  React.useEffect(() => {
-    POST_REVIEW({
-      name,
-      comment,
-      product: parseInt(id),
-      rating: `${star}`,
-    }).then()
-  }, [modal])
-  
   return (
     <div className={c.reviews}>
       <div className={c.title_container}>

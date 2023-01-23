@@ -7,7 +7,7 @@ const MagazineCard = ({data}) => {
   
   return (
     <div className={c.magazineCard}>
-      <Link to={`/magazine/${data.id}`}>
+      <Link to={`/products/${data.id}`}>
         <img src={data.image} alt=''/>
       </Link>
     </div>
