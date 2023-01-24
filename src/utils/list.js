@@ -105,39 +105,6 @@ export const sliderCard = [
   },
 ]
 
-export const actual_card_1 = [
-  {
-    id:1,
-    title: 'Джамира TGFOP',
-    category: 'Черный чай',
-    price: '470',
-    url: '/assets/slider-card-1.jpg'
-  },
-  {
-    id:2,
-    title: 'Джамира TGFOP',
-    category: 'Черный чай',
-    price: '470',
-    url: '/assets/slider-card-2.jpg'
-  },
-  {
-    id:3,
-    title: 'Джамира TGFOP',
-    category: 'Черный чай',
-    price: '470',
-    url: '/assets/slider-card-1.jpg'
-  },
-]
-
-
-
-
-
-export const actualContent_2 = {
-  type: '14 видов',
-  title: '«Что-нибудь необычное»',
-  text: 'Габа, Муира Пуама, Лапсанг Сушонг, Анчан. Настой цвета синей акварели, копченый вкус, рыбные ноты. Все, что выходит за границы чайной классики для любителей необычного.',
-}
 
 export const stockCards = [
   {
@@ -251,16 +218,6 @@ export const aboutCompanyList = [
 export const forClient = [
   {
     id:1,
-    caption: "Скидки и акции",
-    route:"/actions"
-  },
-  {
-    id:2,
-    caption: "События",
-    route:"/events"
-  },
-  {
-    id:3,
     caption: 'Конкурсы',
     route: '/contests'
   },

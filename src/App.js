@@ -22,7 +22,6 @@ function App() {
         <Route path="/quality" element={<LayoutPages.QualityPage />}/>
         <Route path="/about" element={<LayoutPages.About />}/>
         <Route path="/actions" element={<LayoutPages.Actions />}/>
-        <Route path="/events" element={<LayoutPages.Events />}/>
         <Route path="/locations" element={<LayoutPages.Locations />}/>
         <Route path="/contacts" element={<LayoutPages.Contacts />}/>
         <Route path="/favorites" element={<LayoutPages.Favorites />}/>

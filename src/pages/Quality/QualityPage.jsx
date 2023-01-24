@@ -4,9 +4,13 @@ import React from 'react'
 import c from "./index.module.scss"
 
 import QualityIcon from "../../images/magazine/2-1 1.png"
+import {ScrollToTop} from "../../helpers/scroll";
 
 
 const QualityPage = () => {
+  React.useEffect(() => {
+    ScrollToTop()
+  }, [])
   return (
     <div className={c.quality_page}>
       <div className={c.quality_container}>

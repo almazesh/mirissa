@@ -29,6 +29,7 @@ function ReviewsBlock({id, review, modal, setModal}) {
       <div className={c.user_reviews}>
         <div className={c.review_block}>
           {
+            review.length > 0 ?
             review?.reverse().map(item => (
               <div className={c.review_block_item} key={item.id}>
                 <div className={c.block_top}>
@@ -56,7 +57,7 @@ function ReviewsBlock({id, review, modal, setModal}) {
                   }
                 </div>
               </div>
-            ))
+            )) : <h2 className={c.empty_text}>Еще нет отзывов</h2>
           }
         </div>
         <div className={c.add_review}>

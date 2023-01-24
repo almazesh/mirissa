@@ -3,6 +3,8 @@ import React from 'react'
 import c from "./index.module.scss"
 import {useNavigate} from "react-router-dom";
 import {RxCross2} from "react-icons/rx";
+import {GET_SINGLE_PRODUCT} from "../../../api/api";
+import {AiFillStar, AiOutlineStar} from "react-icons/ai";
 
 
 const CatalogCard = (
@@ -19,6 +21,7 @@ const CatalogCard = (
   }) => {
   
   const [like, setLike] = React.useState(false)
+  const [product, setProduct] = React.useState(null)
   const navigate = useNavigate()
   
   React.useEffect(() => {
@@ -28,11 +31,15 @@ const CatalogCard = (
     }
   }, [])
   
+  React.useEffect(() => {
+    GET_SINGLE_PRODUCT(id).then(res => setProduct(res.data))
+  }, [])
+  
   let icon;
   
-  if(page === 'favorites'){
+  if (page === 'favorites') {
     icon = <RxCross2/>
-  }else if(page === 'catalog'){
+  } else if (page === 'catalog') {
     icon = <svg xmlns="http://www.w3.org/2000/svg" width="22" height="17">
       <path fill="#552f1d" stroke="#552f1d" strokeMiterlimit="50" strokeWidth="1.5"
             d="M20.998 5.395c0-1.99-1.78-4.395-4.75-4.395C13.28 1 11.5 3.93 11.5 3.93S9.72 1 6.75 1C3.78 1 2 3.405 2 5.395 2 7.385 1.629 8.823 11.499 16c9.87-7.177 9.498-8.615 9.498-10.605z">
@@ -80,6 +87,24 @@ const CatalogCard = (
         <p>
           Яркий и гармоничный чай, сочетающий в себе удивительные ноты.
         </p>
+      </div>
+      <div className={c.total_rate}>
+        <div className={c.more_stars}>
+          {
+            Array(5).fill(0).map((_, i) => (
+              <p key={i}>
+                {
+                  product?.total_review > i ? <AiFillStar/> : <AiOutlineStar/>
+                }
+              </p>
+            ))
+          }
+        </div>
+        <div className={c.stars_count}>
+          {
+            Math.trunc(product?.total_review * 100) / 100
+          }
+        </div>
       </div>
     </div>
   )

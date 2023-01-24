@@ -8,7 +8,6 @@
   text-align: center;
   padding: 20px 24px 60px;
   cursor: pointer;
-
   &:hover {
     box-shadow: 0 2px 30px 10px rgb(237 237 237 / 50%);
 
@@ -25,18 +24,21 @@
     width: 100%;
     padding: 20px 24px 60px;
   }
-  svg {
-    cursor: pointer;
-    font-size: 28px;
-    position: absolute;
-    left: 8%;
-    top: 8%;
-    font-weight: 100;
-    color: #552f1d;
+  span{
+    svg {
+      cursor: pointer;
+      font-size: 28px;
+      position: absolute;
+      left: 8%;
+      top: 8%;
+      font-weight: 100;
+      color: #552f1d;
+    }
+    .cross{
+      top: 7%;
+    }
   }
-  .cross{
-    top: 7%;
-  }
+
   .tea {
     font-weight: 300;
     text-align: center;
@@ -106,6 +108,15 @@
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       line-clamp: 3;
+    }
+  }
+  .total_rate{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    .more_stars{
+      display: flex;
     }
   }
 }

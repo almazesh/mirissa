@@ -29,21 +29,32 @@ function Favorites() {
       <div className={c.favorites_container_title}>
         <h2>Избранное</h2>
       </div>
-      <div className={c.favorites_products}>
-        {
-          products?.length > 0
-          ? products?.map(item => (
-              <CatalogCard
-                {...item}
-                key={item?.id}
-                itemObj={item}
-                setRemove={setRemoveSingleFavorite}
-                setReload={setReload}
-                page={'favorites'}
-              />
-            ))
-            : <h4 className={c.favorites_message}>У вас нет избранных товаров</h4>
-        }
+      
+      <div className={c.favorites_inner}>
+        <div className={c.favorites_block}>
+          <div className={c.block_text}>
+            ИЗБРАННОЕ
+          </div>
+          <div className={c.block_img}>
+            <img src='/assets/favorite-block.png' alt="" />
+          </div>
+        </div>
+        <div className={c.favorites_products}>
+          {
+            products?.length > 0
+              ? products?.map(item => (
+                <CatalogCard
+                  {...item}
+                  key={item?.id}
+                  itemObj={item}
+                  setRemove={setRemoveSingleFavorite}
+                  setReload={setReload}
+                  page={'favorites'}
+                />
+              ))
+              : <h4 className={c.favorites_message}>У вас нет избранных товаров</h4>
+          }
+        </div>
       </div>
     </div>
   )

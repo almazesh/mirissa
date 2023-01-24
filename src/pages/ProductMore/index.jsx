@@ -12,6 +12,7 @@ import "swiper/css/effect-fade";
 import ReviewsBlock from "../../components/ReviewsBlock";
 import {AiFillStar, AiOutlineStar} from "react-icons/ai";
 import {Loader} from "../../components/Loader/Loader";
+import { ScrollToTop } from '../../helpers/scroll';
 
 function ProductMore() {
   const {id} = useParams()
@@ -21,6 +22,10 @@ function ProductMore() {
   React.useEffect(() => {
     GET_SINGLE_PRODUCT(parseInt(id)).then(res => setProduct(res.data))
   }, [modal])
+
+  React.useEffect(() => {
+    ScrollToTop()
+  }, [])
   
   console.log(product)
   if(!product) return <Loader/>

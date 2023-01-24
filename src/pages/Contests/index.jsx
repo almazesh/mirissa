@@ -3,6 +3,7 @@ import c from './Contests.module.scss'
 import {GET_CONTEST} from "../../api/api";
 import {Loader} from "../../components/Loader/Loader";
 import ContestsBlock from "../../components/ContestsBlock";
+import {ScrollToTop} from "../../helpers/scroll";
 
 function Contests() {
   const [data, setData] = React.useState(null)
@@ -15,6 +16,7 @@ function Contests() {
   }, [selectedDate])
   
   React.useEffect(() => {
+    ScrollToTop()
     GET_CONTEST().then(r => {
       setData(r.data)
       const filtered = r.data?.filter(item => item.id === selectedDate)
