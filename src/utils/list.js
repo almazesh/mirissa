@@ -238,17 +238,18 @@ export const FilterList = [
   {
     id:1,
     caption: "популярные",
-    
+    sort: 'popular',
   },
   {
     id:2,
     caption: "цена",
+    sort:'price',
     
   },
   {
     id:3,
     caption: "рейтинг",
-    
+    sort: 'rate',
   },
 ]
 

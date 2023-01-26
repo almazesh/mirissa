@@ -4,7 +4,7 @@
   @media (max-width: 1024px){
     padding: 70px 20px;
   }
-  @media (max-width: 425px) {
+  @media (max-width: 430px) {
     padding: 35px 20px;
   }
   .form_container {
@@ -21,7 +21,7 @@
       @media (max-width: 1024px) {
         justify-content: space-between;
       }
-      @media (max-width: 425px) {
+      @media (max-width: 430px) {
         flex-direction: column;
       }
       .form_text {
@@ -75,7 +75,7 @@
         }
         .form_btn {
           padding: 0 30px;
-          @media (max-width: 425px) {
+          @media (max-width: 430px) {
             width: 100px;
           }
           button {
@@ -90,7 +90,7 @@
             color: white;
             font-size: 20px;
             margin-top: 10px;
-            @media (max-width: 425px) {
+            @media (max-width: 430px) {
               display: none;
             }
           }
@@ -113,7 +113,7 @@
         @media (max-width: 1024px){
           margin-top: 50px;
         }
-        @media (max-width: 425px) {
+        @media (max-width: 430px) {
           height: 65px;
         }
         &:hover span {
@@ -131,7 +131,7 @@
           line-height: 25px;
           color: white;
           transition: .3s;
-          @media (max-width: 425px) {
+          @media (max-width: 430px) {
             display: none;
           }
         }

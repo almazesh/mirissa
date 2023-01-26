@@ -27,8 +27,8 @@ function ProductMore() {
     ScrollToTop()
   }, [])
   
-  console.log(product)
-  if(!product) return <Loader/>
+ 
+  if(!product) return <div className={c.loader}><Loader/></div>
   return (
     <div className={c.more}>
       <div className={c.more_title}>

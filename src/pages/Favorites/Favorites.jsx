@@ -24,6 +24,7 @@ function Favorites() {
     
   }, [removeSingleFavorite])
   
+  
   return (
     <div className={c.favorites_container}>
       <div className={c.favorites_container_title}>

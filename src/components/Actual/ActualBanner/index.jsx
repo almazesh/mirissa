@@ -28,7 +28,7 @@ function ActualBanner({background}) {
       <div className={c.cards}>
         {actual?.length === 0 && <p>Empty</p>}
 
-        {!actual && <Loader />}
+        {!actual && <div className={c.loader}><Loader /></div>}
 
         {actual?.map(item => <MagazineCard data={item} key={item.id}/>)}
       </div>

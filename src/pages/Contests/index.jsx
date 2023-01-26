@@ -25,7 +25,7 @@ function Contests() {
   }, [])
   
   
-  if(!filteredData) return <Loader/>
+  if(!filteredData) return <div className={c.loader}><Loader/></div>
   return (
     <div className={c.contests}>
       <div className={c.contests_title}>

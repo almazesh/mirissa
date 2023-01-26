@@ -12,7 +12,7 @@ const ContactData = () => {
 
   return (
     <div className={c.contacts_row}>
-      {!contacts && <Loader />}
+      {!contacts && <div className={c.laoder}><Loader /></div>}
 
       {contacts === "undefined" && <p>Empty</p>}
       
