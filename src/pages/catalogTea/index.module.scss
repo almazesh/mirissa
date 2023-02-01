@@ -46,7 +46,7 @@
         @media (max-width: 375px) {
           gap: 10px;
         }
-        .sort_item {
+        li{
           cursor: pointer;
           font-weight: 300;
           font-size: 16px;
@@ -55,6 +55,7 @@
         }
         .active_sort{
           border-bottom: 1px solid #000;
+          color: black;
         }
       }
     }

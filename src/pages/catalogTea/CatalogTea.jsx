@@ -16,7 +16,7 @@ const Catalog = () => {
   const [sortedArr, setSortedArr] = React.useState(null)
   const [filterType, setFilterType] = React.useState(null)
   const [reload, setReload] = React.useState(1)
-  const [refresh, setRefresh] = React.useState('')
+  const [refresh, setRefresh] = React.useState(0)
   
   
   React.useEffect(() => {
@@ -38,7 +38,7 @@ const Catalog = () => {
       return  b.total_review - a.total_review
     })
     setSortedArr(sorted)
-    setRefresh('reload')
+    setRefresh(prev => prev + 1)
   }
   
   const priceSort = () => {
@@ -46,15 +46,15 @@ const Catalog = () => {
       return  b.price - a.price
     })
     setSortedArr(sorted)
-    setRefresh('reload')
+    setRefresh(prev => prev + 1)
   }
   
   const popularSort = () => {
     const sorted = catalog.sort((a, b) => {
-      return  a.review_product.length - b.review_product.length
+      return  b.review_product.length - a.review_product.length
     })
     setSortedArr(sorted)
-    setRefresh('reload')
+    setRefresh(prev => prev + 1)
   }
   
   
