@@ -1,0 +1,32 @@
+version: '3.7'
+
+services:
+  nginx:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: ./docker/nginx/Dockerfile
+    ports:
+      - 80:80
+    volumes:
+      - ./docker/nginx/dev:/etc/nginx/conf.d
+    networks:
+      - my-network
+
+
+  frontend-ui:
+    build: .
+    ports:
+      - "3000:3000"
+    container_name: frontend-ui
+    stdin_open: true
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    env_file:
+      - ./.env
+    networks:
+      - my-network
+
+networks:
+  my-network:
