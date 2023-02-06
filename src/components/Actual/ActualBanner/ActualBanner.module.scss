@@ -59,7 +59,12 @@
         display: none;
       }
     }
-
+    .empty_text{
+      width: 100%;
+      margin-top: 50px;
+      text-align: center;
+      height: 200px;
+    }
     .cards_item:nth-last-child(2) {
       @media (max-width: 425px) {
         display: none;

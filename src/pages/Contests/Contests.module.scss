@@ -1,21 +1,30 @@
-.contests{
+.contests {
   max-width: 1000px;
   margin: auto;
   padding: 0 10px;
+
   @media (max-width: 430px) {
     margin-top: 50px;
   }
+
   .contests_title {
     text-align: center;
     margin-top: 30px;
-    h1{
+
+    h1 {
       font-size: 2rem;
       font-weight: 400;
     }
   }
 
+  .empty_text {
+    height: 200px;
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+  }
 }
 
-.loader{
+.loader {
   margin: 100px auto;
 }

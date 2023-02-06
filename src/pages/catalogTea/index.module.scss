@@ -63,6 +63,11 @@
     .catalog_row {
       display: flex;
       flex-wrap: wrap;
+      .empty_text{
+        height: 200px;
+        width: 100%;
+        text-align: center;
+      }
       .loader{
         margin: 100px auto;
       }

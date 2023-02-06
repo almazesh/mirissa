@@ -114,6 +114,9 @@ const Catalog = () => {
         </div>
         <div className={c.catalog_row}>
           {
+            sortedArr?.length === 0 && <p className={c.empty_text}>Empty</p>
+          }
+          {
             !sortedArr ? <div className={c.loader}><Loader/></div> :
               sortedArr?.map(item => (
                 <CatalogCard

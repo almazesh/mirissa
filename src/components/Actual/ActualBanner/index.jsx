@@ -26,7 +26,7 @@ function ActualBanner({background}) {
         </p>
       </div>
       <div className={c.cards}>
-        {actual?.length === 0 && <p>Empty</p>}
+        {actual?.length === 0 && <p className={c.empty_text}>Empty</p>}
 
         {!actual && <div className={c.loader}><Loader /></div>}
 
