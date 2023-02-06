@@ -15,6 +15,7 @@ import Quality from '../Quality/Quality';
 import {useNavigate} from "react-router-dom";
 
 function Banner() {
+  React.lazy(() => import(sliderImg))
   const navigate = useNavigate()
   return (
     <div className={c.banner}>
