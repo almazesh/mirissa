@@ -34,7 +34,8 @@ function CardSlider() {
   }, [removeSingleFavorite])
   
   const {catalog} = useData()
-  if (!catalog) return <Loader/>
+
+  if (!catalog) return <div className={c.loader}> <Loader/></div>
   return (
     <div className={c.slider_card}>
       <Swiper

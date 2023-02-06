@@ -126,6 +126,11 @@
         border-radius: .5rem;
       }
     }
+    .loader{
+      @media (max-width: 1024px) {
+        display: none;
+      }
+    }
     .slider_card{
       overflow: hidden;
       height: 600px;
