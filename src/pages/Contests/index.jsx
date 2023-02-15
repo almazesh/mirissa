@@ -33,12 +33,15 @@ function Contests() {
           Конкурсы
         </h1>
       </div>
-      <ContestsBlock
+      {
+        data?.length === 0 ? <p className={c.empty_text}>Empty</p> :
+        <ContestsBlock
         data={data}
         selectedDate={selectedDate}
         setSelectedDate={setSelectedDate}
         filteredData={filteredData}
       />
+      }
     </div>
   );
 }

@@ -1,5 +1,3 @@
-
-
 import React from 'react'
 import { ScrollToTop } from '../../helpers/scroll';
 import { locationList } from '../../utils/list';
@@ -18,7 +16,7 @@ const Locations = () => {
   const handleSearch = (e) => {
     setMarketList(markets.filter(i => i.location.toLowerCase().includes(e.toLowerCase())))
   }
-
+  
   return (
     <div className={c.locations_container}>
       <div className={c.locations_container_title}>
@@ -52,11 +50,14 @@ const Locations = () => {
               ))
             }
 
-            <div>
-              {
-                marketList.length === 0 && <p className={c.none}>Такого адреса не существует!</p>
-              }
-            </div>
+            
+            {
+              marketList.length === 0 &&
+              <div>
+                <p className={c.none}>Такого адреса не существует!</p>
+              </div>
+              
+            }
           </tbody>
         </table>
       </div>

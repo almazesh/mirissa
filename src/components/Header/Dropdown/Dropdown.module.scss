@@ -1,26 +1,27 @@
 .dropdown{
   position: absolute;
   background-color: white;
-  width: 70%;
+  width: 35%;
+  height: 100vh;
   min-height: 200px;
   z-index: 500;
   top: 85px;
   left: -1000px;
   opacity: 0;
   transition: .7s ease-in-out;
+  padding: 0 10px;
   @media (max-width: 425px){
     width: 100%;
+    height: 100vh;
   }
   .dropdown_content{
     width: 90%;
     margin: 50px auto;
     .list{
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 50px;
       li{
-        width: 40%;
-        margin-right: 16px;
-        margin-bottom: 50px;
         font-size: 18px;
         .activeList {
           white-space: nowrap;

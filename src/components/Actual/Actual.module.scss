@@ -32,6 +32,9 @@
         font-size: 25px;
         line-height: 36px;
         color: #27160e;
+        @media (max-width: 375px) {
+          font-size: 20px;
+        }
       }
 
       .title {

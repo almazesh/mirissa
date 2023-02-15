@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.31ac4326.css",
+    "main.js": "/static/js/main.ac4f5fc7.js",
+    "static/media/Blacker-Display-Medium-trial.ttf": "/static/media/Blacker-Display-Medium-trial.c724d75b20d9088ec969.ttf",
+    "static/media/Blacker-Display-Light-trial.ttf": "/static/media/Blacker-Display-Light-trial.703c4582bbdf33781cb0.ttf",
+    "static/media/Blacker-Display-Bold-trial.ttf": "/static/media/Blacker-Display-Bold-trial.5e4628c950816597c0ba.ttf",
+    "static/media/DSC03508 3.png": "/static/media/DSC03508 3.040123c89ad8d83acaab.png",
+    "static/media/DSC03508 2.png": "/static/media/DSC03508 2.7d70b9e011646a8782af.png",
+    "static/media/long-garland-christmas-tree-branches-vector-illustration-christmas-garland-beautiful-evergreen-garland-xmas-tree-branches-105662649-removebg-preview.png": "/static/media/long-garland-christmas-tree-branches-vector-illustration-christmas-garland-beautiful-evergreen-garland-xmas-tree-branches-105662649-removebg-preview.e071bb7456708dc4f6c7.png",
+    "static/media/73-736750_margot-robbie-hair-margot-robbie-style-actress-margot-removebg-preview.png": "/static/media/73-736750_margot-robbie-hair-margot-robbie-style-actress-margot-removebg-preview.c092c178a5a7428413b0.png",
+    "static/media/ 3.png": "/static/media/c8e51091f063062953bb14df2475d487 3.9d5bbcca151a79b19a32.png",
+    "static/media/2023-01-22 19.34.13.jpg": "/static/media/2023-01-22 19.34.13.dff220ca92521b4d5470.jpg",
+    "static/media/DS CenturyCapitals Regular.ttf": "/static/media/DS CenturyCapitals Regular.51e29010ffd1706fdc49.ttf",
+    "static/media/selections-banner-4.webp": "/static/media/selections-banner-4.962c26659c9cc086f497.webp",
+    "static/media/2-1 1.png": "/static/media/2-1 1.8748bcf3e9302890b507.png",
+    "static/media/selections-banner-1.webp": "/static/media/selections-banner-1.07675aeb166fa2ad2887.webp",
+    "static/media/png-clipart-snowflake-rotational-symmetry-snowflake-blue-winter-thumbnail-removebg-preview.png": "/static/media/png-clipart-snowflake-rotational-symmetry-snowflake-blue-winter-thumbnail-removebg-preview.afe1d3e5c0a67bf618a3.png",
+    "static/media/actual-banner.webp": "/static/media/actual-banner.a1e3d5bfa18b4ea5b99e.webp",
+    "static/media/selections-banner-2.webp": "/static/media/selections-banner-2.a1e3d5bfa18b4ea5b99e.webp",
+    "static/media/selections-banner-3.webp": "/static/media/selections-banner-3.999a5db6bb42bfce37dd.webp",
+    "index.html": "/index.html",
+    "main.31ac4326.css.map": "/static/css/main.31ac4326.css.map",
+    "main.ac4f5fc7.js.map": "/static/js/main.ac4f5fc7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31ac4326.css",
+    "static/js/main.ac4f5fc7.js"
+  ]
+}

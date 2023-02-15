@@ -7,10 +7,13 @@
   &_title {
     text-align: center;
     margin-top: 30px;
-
+    padding: 0 10px;
     h2 {
       font-size: 2em;
       font-weight: 400;
+      @media (max-width: 430px) {
+        font-size: 1.6em;
+      }
     }
   }
 
@@ -19,14 +22,17 @@
     margin-top: 30px;
     align-items: center;
     gap: 30px;
+    padding: 0 10px;
     h4 {
       margin: 0;
+      @media (max-width: 430px) {
+        font-size: 18px;
+        white-space: nowrap;
+      }
     }
     section {
       position: relative;
       width: 70%;
-
-      
 
       input {
         width: 100%;
@@ -68,6 +74,9 @@
           font-size: 20px;
           color: #4D1200;
           top: 100px;
+          @media (max-width: 430px) {
+            left: 15%;
+          }
         }
       }
     }

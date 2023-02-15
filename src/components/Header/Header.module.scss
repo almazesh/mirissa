@@ -3040,7 +3040,13 @@
     align-items: center;
     color: #543019;
     position: relative;
-
+    @media (max-width: 1024px) {
+      justify-content: space-between;
+      gap: 20px;
+    }
+    @media (max-width: 320px) {
+      gap: 5px;
+    }
     .tree {
       position: absolute;
       width: 400px;
@@ -3146,6 +3152,7 @@
         font-family: "DS CenturyCapitals", sans-serif;
         font-weight: 400;
         text-transform: uppercase;
+        white-space: nowrap;
         @media (max-width: 375px) {
           font-size: 9px;
         }
