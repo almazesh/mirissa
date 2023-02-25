@@ -42,7 +42,7 @@ function Banner() {
                     <div style={{background: `url("${item.url}") center / cover`}} className={c.slider_content}>
                       <h1>{item.title}</h1>
                       <span>{item.text}</span>
-                      <button onClick={() => navigate('/contests')}>Подробнее</button>
+                      <button onClick={() => navigate(item.route)}>Подробнее</button>
                     </div>
                   </SwiperSlide>
                 )

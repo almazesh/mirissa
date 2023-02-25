@@ -41,7 +41,7 @@ function ProductMore() {
               Array(5).fill(0).map((_, i) => (
                 <span key={i}>
                  {
-                   product?.total_review > i ?  <AiFillStar/> :  <AiOutlineStar/>
+                   Math.floor(product?.total_review) > i ?  <AiFillStar/> :  <AiOutlineStar/>
                  }
               </span>
               ))

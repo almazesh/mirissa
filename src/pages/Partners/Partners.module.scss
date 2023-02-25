@@ -1,0 +1,42 @@
+.partners{
+  max-width: 1150px;
+  margin: auto;
+  padding: 0 20px;
+  .partners_title{
+    text-align: center;
+    margin-top: 30px;
+    h2 {
+      font-size: 2em;
+      font-weight: 400;
+    }
+  }
+  .partners_content{
+    margin-top: 50px;
+    width: 100%;
+
+    span{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 22px;
+      font-size: 21px;
+      @media (max-width: 430px) {
+        font-size: 18px;
+      }
+      @media (max-width: 375px) {
+        font-size: 14px;
+      }
+    }
+    .images{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+      img{
+        width: 500px;
+        @media (max-width: 430px) {
+          width: 90%;
+        }
+      }
+    }
+  }
+}

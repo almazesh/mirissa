@@ -66,11 +66,13 @@ export const sliderImg = [
     url:'/assets/right-slider-1.jpg',
     title: 'Чай по подписке ',
     text: 'Качественный чай без лишних сложностей',
+    route: '/magazine'
   },
   {
     url: '/assets/right-slider-2.jpg',
     title: 'Фунт чая  со скидкой 40%',
     text: 'для тех, кто пьет чай впечатляющими объемами',
+    route: '/catalog/tea',
   },
   {
     url: '/assets/right-slider-3.jpg',
@@ -208,9 +210,14 @@ export const aboutCompanyList = [
     route: "/about"
   },
   {
-    id:13,
+    id:2,
     caption: "Наши Чаи",
     route: "/catalog/tea"
+  },
+  {
+    id:3,
+    caption: "Партнеры",
+    route: "/partners"
   },
 ]
 
@@ -512,5 +519,24 @@ export const tabList = [
     caption: "Галерея",
     route: "Gallery",
     element: Gallery
+  },
+]
+
+export const partners_img = [
+  {
+    id:1,
+    url:'/assets/partners-img-1.jpg',
+  },
+  {
+    id:2,
+    url: '/assets/partners-img-2.jpg',
+  },
+  {
+    id:3,
+    url: '/assets/partners-img-3.jpg',
+  },
+  {
+    id:4,
+    url: '/assets/partners-img-4.jpg',
   },
 ]

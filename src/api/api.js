@@ -18,3 +18,5 @@ export const GET_CONTEST = () => instance.get('/contests/')
 export const GET_DISCOUNTS = () => instance.get('/discounts/')
 
 export const GET_SINGLE_DISCOUNTS = (id) => instance.get(`/discounts/${id}`)
+
+export const GET_PARTNERS = () => instance.get('/partners/')

@@ -94,7 +94,7 @@ const CatalogCard = (
             Array(5).fill(0).map((_, i) => (
               <p key={i}>
                 {
-                  product?.total_review > i ? <AiFillStar/> : <AiOutlineStar/>
+                  Math.floor(product?.total_review) > i ? <AiFillStar/> : <AiOutlineStar/>
                 }
               </p>
             ))

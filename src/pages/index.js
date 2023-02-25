@@ -10,7 +10,7 @@ import QualityPage from "./Quality/QualityPage"
 import ProductMore from "./ProductMore";
 import Contests from "./Contests";
 import Discounts from "./Discounts";
-
+import Partners from "./Partners";
 
 export {
   Main,
@@ -25,4 +25,5 @@ export {
   ProductMore,
   Contests,
   Discounts,
+  Partners,
 }
