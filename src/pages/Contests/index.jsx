@@ -4,6 +4,7 @@ import {GET_CONTEST} from "../../api/api";
 import {Loader} from "../../components/Loader/Loader";
 import ContestsBlock from "../../components/ContestsBlock";
 import {ScrollToTop} from "../../helpers/scroll";
+import Empty from "../../components/EmptyText";
 
 function Contests() {
   const [data, setData] = React.useState(null)
@@ -34,7 +35,7 @@ function Contests() {
         </h1>
       </div>
       {
-        data?.length === 0 ? <p className={c.empty_text}>Empty</p> :
+        data?.length === 0 ? <p className={c.empty_text}><Empty/></p> :
         <ContestsBlock
         data={data}
         selectedDate={selectedDate}

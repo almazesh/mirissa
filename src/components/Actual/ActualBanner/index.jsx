@@ -4,6 +4,7 @@ import useData from '../../../hooks/useData';
 import { Loader } from '../../Loader/Loader';
 import MagazineCard from '../../MagazineCard/MagazineCard';
 import c from './ActualBanner.module.scss'
+import Empty from "../../EmptyText";
 
 function ActualBanner({background}) {
   const { actual } = useData();
@@ -26,7 +27,9 @@ function ActualBanner({background}) {
         </p>
       </div>
       <div className={c.cards}>
-        {actual?.length === 0 && <p className={c.empty_text}>Empty</p>}
+        {actual?.length === 0 && <p className={c.empty_text}>
+          <Empty/>
+        </p>}
 
         {!actual && <div className={c.loader}><Loader /></div>}
 

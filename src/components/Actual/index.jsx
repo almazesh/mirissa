@@ -18,7 +18,6 @@ function Actual() {
            </div>
          </div>
          <ActualBanner background={actualBackImg_1}/>
-         {/* <ActualBanner {...actualContent_2} background={actualBackImg_2}/> */}
        </div>
      </div>
    </>

@@ -5,6 +5,7 @@ import useData from '../../hooks/useData'
 import { Loader } from '../Loader/Loader';
 
 import c from "./index.module.scss"
+import Empty from "../EmptyText";
 
 const ContactData = () => {
 
@@ -12,9 +13,11 @@ const ContactData = () => {
 
   return (
     <div className={c.contacts_row}>
-      {!contacts && <div className={c.laoder}><Loader /></div>}
+      {!contacts && <div className={c.loader}><Loader /></div>}
 
       {contacts === "undefined" && <p>Empty</p>}
+  
+      {contacts?.length === 0 && <p><Empty/></p>}
       
       {contacts && (
         <React.Fragment>
