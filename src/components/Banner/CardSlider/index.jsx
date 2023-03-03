@@ -11,6 +11,7 @@ import "swiper/css/effect-fade";
 
 import useData from "../../../hooks/useData";
 import {Loader} from "../../Loader/Loader";
+import Empty from "../../EmptyText";
 
 function CardSlider() {
   const [singleFavorite, setSingleFavorite] = React.useState(null)
@@ -35,6 +36,7 @@ function CardSlider() {
   
   const {catalog} = useData()
 
+  if (catalog?.length === 0) return <div className={c.empty}><Empty/></div>
   if (!catalog) return <div className={c.loader}> <Loader/></div>
   return (
     <div className={c.slider_card}>

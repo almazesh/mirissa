@@ -8,6 +8,7 @@ import { ScrollToTop } from '../../helpers/scroll'
 import useData from '../../hooks/useData'
 
 import c from "./index.module.scss"
+import Empty from "../../components/EmptyText";
 
 
 const Magazine = () => {
@@ -29,7 +30,7 @@ const Magazine = () => {
         <h2>Подборки</h2>
 
         <div className={c.magazine_row}>
-          {actual?.length === 0 && <p>Empty</p>}
+          {actual?.length === 0 && <p className={c.empty}><Empty/></p>}
 
           {!actual && <Loader />}
 

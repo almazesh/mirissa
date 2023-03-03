@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.4c2db279.css",
-    "main.js": "/static/js/main.f18fc5c8.js",
+    "main.css": "/static/css/main.ce9c95f3.css",
+    "main.js": "/static/js/main.1f96af8b.js",
     "static/media/Blacker-Display-Medium-trial.ttf": "/static/media/Blacker-Display-Medium-trial.c724d75b20d9088ec969.ttf",
     "static/media/Blacker-Display-Light-trial.ttf": "/static/media/Blacker-Display-Light-trial.703c4582bbdf33781cb0.ttf",
     "static/media/Blacker-Display-Bold-trial.ttf": "/static/media/Blacker-Display-Bold-trial.5e4628c950816597c0ba.ttf",
@@ -20,11 +20,11 @@
     "static/media/selections-banner-2.webp": "/static/media/selections-banner-2.a1e3d5bfa18b4ea5b99e.webp",
     "static/media/selections-banner-3.webp": "/static/media/selections-banner-3.999a5db6bb42bfce37dd.webp",
     "index.html": "/index.html",
-    "main.4c2db279.css.map": "/static/css/main.4c2db279.css.map",
-    "main.f18fc5c8.js.map": "/static/js/main.f18fc5c8.js.map"
+    "main.ce9c95f3.css.map": "/static/css/main.ce9c95f3.css.map",
+    "main.1f96af8b.js.map": "/static/js/main.1f96af8b.js.map"
   },
   "entrypoints": [
-    "static/css/main.4c2db279.css",
-    "static/js/main.f18fc5c8.js"
+    "static/css/main.ce9c95f3.css",
+    "static/js/main.1f96af8b.js"
   ]
 }

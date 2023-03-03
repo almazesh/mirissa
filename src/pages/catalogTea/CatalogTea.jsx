@@ -7,6 +7,7 @@ import CatalogCard from './CatalogCard/CatalogCard';
 import c from "./index.module.scss"
 import {Loader} from "../../components/Loader/Loader";
 import {GET_PRODUCTS} from "../../api/api";
+import Empty from "../../components/EmptyText";
 
 const Catalog = () => {
   
@@ -22,7 +23,7 @@ const Catalog = () => {
   React.useEffect(() => {
     ScrollToTop()
   }, [])
-
+  
   React.useEffect(() => {
     GET_PRODUCTS()
       .then(res => {
@@ -35,7 +36,7 @@ const Catalog = () => {
   
   const rateSort = () => {
     const sorted = catalog.sort((a, b) => {
-      return  b.total_review - a.total_review
+      return b.total_review - a.total_review
     })
     setSortedArr(sorted)
     setRefresh(prev => prev + 1)
@@ -43,7 +44,7 @@ const Catalog = () => {
   
   const priceSort = () => {
     const sorted = catalog.sort((a, b) => {
-      return  b.price - a.price
+      return b.price - a.price
     })
     setSortedArr(sorted)
     setRefresh(prev => prev + 1)
@@ -51,7 +52,7 @@ const Catalog = () => {
   
   const popularSort = () => {
     const sorted = catalog.sort((a, b) => {
-      return  b.review_product.length - a.review_product.length
+      return b.review_product.length - a.review_product.length
     })
     setSortedArr(sorted)
     setRefresh(prev => prev + 1)
@@ -59,11 +60,11 @@ const Catalog = () => {
   
   
   React.useEffect(() => {
-    if(filterType?.sort === 'rate'){
+    if (filterType?.sort === 'rate') {
       rateSort()
-    }else if(filterType?.sort === 'price'){
+    } else if (filterType?.sort === 'price') {
       priceSort()
-    }else if(filterType?.sort === 'popular'){
+    } else if (filterType?.sort === 'popular') {
       popularSort()
     }
   }, [filterType, refresh])
@@ -85,7 +86,7 @@ const Catalog = () => {
     
   }, [removeSingleFavorite])
   
-
+  
   return (
     <div className={c.container}>
       <div className={c.catalog_title}>
@@ -114,7 +115,9 @@ const Catalog = () => {
         </div>
         <div className={c.catalog_row}>
           {
-            sortedArr?.length === 0 && <p className={c.empty_text}>Empty</p>
+            sortedArr?.length === 0 && <p className={c.empty_text}>
+              <Empty/>
+            </p>
           }
           {
             !sortedArr ? <div className={c.loader}><Loader/></div> :

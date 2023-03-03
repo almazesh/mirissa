@@ -1,18 +1,17 @@
 import React from 'react';
 import c from './Banner.module.scss'
-import {facts_list, sliderCard, sliderImg} from "../../utils/list";
-import SliderCard from "./SliderCard";
-import PaginationCard from './Pagination'
+import {sliderImg} from "../../utils/list";
 import {Swiper, SwiperSlide} from "swiper/react";
-import {Autoplay, Pagination, EffectFade} from "swiper";
-
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/effect-fade";
+import {Autoplay, Pagination, EffectFade, Lazy} from "swiper";
 import CardSlider from "./CardSlider";
 import Fact from '../Fact/Fact';
 import Quality from '../Quality/Quality';
 import {useNavigate} from "react-router-dom";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/effect-fade";
+
 
 function Banner() {
   React.lazy(() => import(sliderImg))
@@ -28,9 +27,10 @@ function Banner() {
             pagination={{
               clickable: true,
             }}
-            modules={[Pagination, Autoplay, EffectFade]}
+            modules={[Pagination, Autoplay, EffectFade, Lazy]}
+            lazy={true}
             autoplay={{
-              delay: 2500,
+              delay: 5000,
               disableOnInteraction: false,
             }}
             effect={"fade"}

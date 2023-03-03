@@ -514,12 +514,6 @@ export const tabList = [
     route: "ContactData",
     element: ContactData
   },
-  {
-    id:3,
-    caption: "Галерея",
-    route: "Gallery",
-    element: Gallery
-  },
 ]
 
 export const partners_img = [
